@@ -8,8 +8,8 @@ namespace BusReservation.Data.UnitOfWork
         private readonly BusReservationDbContext _dbContext;
 
         #region [Repositories]
-        public IBranchRepository BranchRepository => (IBranchRepository)InstantiateRepository<BranchRepository>();
-        public IBusinessBizcodeIdMappingRepository BusinessBizcodeIdMappingRepository => (IBusinessBizcodeIdMappingRepository)InstantiateRepository<BusinessBizcodeIdMappingRepository>();
+        //public IBranchRepository BranchRepository => (IBranchRepository)InstantiateRepository<BranchRepository>();
+        //public IBusinessBizcodeIdMappingRepository BusinessBizcodeIdMappingRepository => (IBusinessBizcodeIdMappingRepository)InstantiateRepository<BusinessBizcodeIdMappingRepository>();
         #endregion
         public UnitOfWork(BusReservationDbContext dbContext)
         {
