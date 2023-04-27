@@ -8,8 +8,11 @@ namespace BusReservation.Data
         {
         }
 
+
+
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
+
         }
     }
 }

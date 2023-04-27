@@ -5,15 +5,21 @@ VisualStudioVersion = 17.5.33424.131
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BusReservation", "BusReservation\BusReservation.csproj", "{71E1615A-A57D-4B48-894D-2EEBD51E4A63}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "User", "User\User.csproj", "{FA441F06-90CE-40F1-A5D4-8256F989D8CA}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "User", "User\User.csproj", "{FA441F06-90CE-40F1-A5D4-8256F989D8CA}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BusRoute", "BusRoute\BusRoute.csproj", "{B4E7C9C9-E988-4F8B-960B-718A7D75486F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BusRoute", "BusRoute\BusRoute.csproj", "{B4E7C9C9-E988-4F8B-960B-718A7D75486F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BusFeedback", "BusFeedback\BusFeedback.csproj", "{5B83DCFB-9DF7-4099-AED2-55C84AF4C2BB}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BusFeedback", "BusFeedback\BusFeedback.csproj", "{5B83DCFB-9DF7-4099-AED2-55C84AF4C2BB}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BusRecommendations", "BusRecommendations\BusRecommendations.csproj", "{9E078FF3-572D-41BB-9DE5-B4A9307F8B22}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BusRecommendations", "BusRecommendations\BusRecommendations.csproj", "{9E078FF3-572D-41BB-9DE5-B4A9307F8B22}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Payment", "Payment\Payment.csproj", "{4482A0FF-F42E-4F4E-BE51-1A2B20F1AB8D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Payment", "Payment\Payment.csproj", "{4482A0FF-F42E-4F4E-BE51-1A2B20F1AB8D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Notifications", "Notifications\Notifications.csproj", "{91E53658-E587-4CFD-916E-F7285F8F41EB}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Weather", "Weather\Weather.csproj", "{CB93A4F0-84B3-4ABF-9899-C81370355395}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OcelotGateway", "OcelotGateway\OcelotGateway.csproj", "{EF900740-EDB3-4490-B961-FC6724089959}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -45,6 +51,18 @@ Global
 		{4482A0FF-F42E-4F4E-BE51-1A2B20F1AB8D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{4482A0FF-F42E-4F4E-BE51-1A2B20F1AB8D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{4482A0FF-F42E-4F4E-BE51-1A2B20F1AB8D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{91E53658-E587-4CFD-916E-F7285F8F41EB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{91E53658-E587-4CFD-916E-F7285F8F41EB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{91E53658-E587-4CFD-916E-F7285F8F41EB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{91E53658-E587-4CFD-916E-F7285F8F41EB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CB93A4F0-84B3-4ABF-9899-C81370355395}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CB93A4F0-84B3-4ABF-9899-C81370355395}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CB93A4F0-84B3-4ABF-9899-C81370355395}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CB93A4F0-84B3-4ABF-9899-C81370355395}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EF900740-EDB3-4490-B961-FC6724089959}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EF900740-EDB3-4490-B961-FC6724089959}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EF900740-EDB3-4490-B961-FC6724089959}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EF900740-EDB3-4490-B961-FC6724089959}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
