@@ -1,4 +1,5 @@
-﻿using Microsoft.EntityFrameworkCore;
+﻿using BusRoute.Models.Entities;
+using Microsoft.EntityFrameworkCore;
 
 
 namespace BusRoute.Data
@@ -9,6 +10,7 @@ namespace BusRoute.Data
         {
         }
 
+        public DbSet<LinjaAutobusave> LinjaAutobusaves {get; set;}
 
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)

@@ -7,7 +7,7 @@
         //public User User { get; set; }
         public string UserId { get; set; }
         //public BusRoute BusRoute { get; set; }
-        public string BusRouteId { get; set; }
+        public int BusRouteId { get; set; }
         public DateTime Date { get; set; }
     }
 }
