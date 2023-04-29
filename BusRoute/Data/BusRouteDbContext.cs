@@ -10,7 +10,7 @@ namespace BusRoute.Data
         {
         }
 
-        public DbSet<LinjaAutobusave> LinjaAutobusaves {get; set;}
+        public DbSet<BusLine> LinjaAutobusaves {get; set;}
 
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
