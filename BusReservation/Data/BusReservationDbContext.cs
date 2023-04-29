@@ -1,4 +1,5 @@
-﻿using Microsoft.EntityFrameworkCore;
+﻿using BusReservation.Models.Entities;
+using Microsoft.EntityFrameworkCore;
 
 namespace BusReservation.Data
 {
@@ -8,6 +9,7 @@ namespace BusReservation.Data
         {
         }
 
+        public DbSet<Reservation> Reservations { get; set; }
 
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)

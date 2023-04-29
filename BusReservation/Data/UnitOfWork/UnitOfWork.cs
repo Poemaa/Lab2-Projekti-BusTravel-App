@@ -1,4 +1,6 @@
-﻿using System.Collections;
+﻿using BusReservation.Data.Repository.Models;
+using BusReservation.Data.Repository.Models.Interfaces;
+using System.Collections;
 
 namespace BusReservation.Data.UnitOfWork
 {
@@ -8,8 +10,7 @@ namespace BusReservation.Data.UnitOfWork
         private readonly BusReservationDbContext _dbContext;
 
         #region [Repositories]
-        //public IBranchRepository BranchRepository => (IBranchRepository)InstantiateRepository<BranchRepository>();
-        //public IBusinessBizcodeIdMappingRepository BusinessBizcodeIdMappingRepository => (IBusinessBizcodeIdMappingRepository)InstantiateRepository<BusinessBizcodeIdMappingRepository>();
+        public IReservationRepository ReservationRepository => (IReservationRepository)InstantiateRepository<ReservationRepository>();
         #endregion
         public UnitOfWork(BusReservationDbContext dbContext)
         {
