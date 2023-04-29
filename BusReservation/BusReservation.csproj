@@ -17,10 +17,8 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Data\Repository\Models\" />
+    <Folder Include="Data\Repository\Models\Implementations\" />
     <Folder Include="Models\DTOs\" />
-    <Folder Include="Services\Interfaces\" />
-    <Folder Include="Services\Implementations\" />
   </ItemGroup>
 
 </Project>

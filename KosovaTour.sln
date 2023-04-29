@@ -11,8 +11,6 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BusRoute", "BusRoute\BusRou
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BusFeedback", "BusFeedback\BusFeedback.csproj", "{5B83DCFB-9DF7-4099-AED2-55C84AF4C2BB}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BusRecommendations", "BusRecommendations\BusRecommendations.csproj", "{9E078FF3-572D-41BB-9DE5-B4A9307F8B22}"
-EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Payment", "Payment\Payment.csproj", "{4482A0FF-F42E-4F4E-BE51-1A2B20F1AB8D}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Weather", "Weather\Weather.csproj", "{CB93A4F0-84B3-4ABF-9899-C81370355395}"
@@ -41,10 +39,6 @@ Global
 		{5B83DCFB-9DF7-4099-AED2-55C84AF4C2BB}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{5B83DCFB-9DF7-4099-AED2-55C84AF4C2BB}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{5B83DCFB-9DF7-4099-AED2-55C84AF4C2BB}.Release|Any CPU.Build.0 = Release|Any CPU
-		{9E078FF3-572D-41BB-9DE5-B4A9307F8B22}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{9E078FF3-572D-41BB-9DE5-B4A9307F8B22}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{9E078FF3-572D-41BB-9DE5-B4A9307F8B22}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{9E078FF3-572D-41BB-9DE5-B4A9307F8B22}.Release|Any CPU.Build.0 = Release|Any CPU
 		{4482A0FF-F42E-4F4E-BE51-1A2B20F1AB8D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{4482A0FF-F42E-4F4E-BE51-1A2B20F1AB8D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{4482A0FF-F42E-4F4E-BE51-1A2B20F1AB8D}.Release|Any CPU.ActiveCfg = Release|Any CPU
