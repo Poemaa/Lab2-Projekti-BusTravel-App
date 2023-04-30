@@ -9,6 +9,7 @@ namespace Weather.Models.Entities
         public double WindSpeed { get; set; }
         public string WindDirection { get; set; }
         public DateTime Date { get; set; }
+        public double Precipitation { get; set; }
     }
 }   
     
