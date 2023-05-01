@@ -13,7 +13,7 @@ namespace BusRoute.Models.Entities
         public TimeOnly ArrivalTime { get; set; }
         public TimeSpan Duration { get; set; }
 
-        
-        public ICollection<BusLine> BusLineItinerary { get; set; }
+
+        public ICollection<BusLine>? BusLineItinerary { get; set; }
     }
 }

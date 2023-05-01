@@ -17,6 +17,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Weather", "Weather\Weather.
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "OcelotGateway", "OcelotGateway\OcelotGateway.csproj", "{EF900740-EDB3-4490-B961-FC6724089959}"
 EndProject
+Project("{54A90642-561A-4BB1-A94E-469ADEE60C69}") = "front-end", "Front-End\front-end.esproj", "{2BF4B3DD-C6C7-4A65-922B-44D2A632FA62}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -51,6 +53,12 @@ Global
 		{EF900740-EDB3-4490-B961-FC6724089959}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{EF900740-EDB3-4490-B961-FC6724089959}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{EF900740-EDB3-4490-B961-FC6724089959}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2BF4B3DD-C6C7-4A65-922B-44D2A632FA62}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2BF4B3DD-C6C7-4A65-922B-44D2A632FA62}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2BF4B3DD-C6C7-4A65-922B-44D2A632FA62}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{2BF4B3DD-C6C7-4A65-922B-44D2A632FA62}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2BF4B3DD-C6C7-4A65-922B-44D2A632FA62}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2BF4B3DD-C6C7-4A65-922B-44D2A632FA62}.Release|Any CPU.Deploy.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
