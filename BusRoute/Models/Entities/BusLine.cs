@@ -19,4 +19,15 @@ namespace BusRoute.Models.Entities
         public ICollection<Location> BusStops { get; set; }
         
     }
+
+    public enum DitetEJaves
+    {
+        EHene,
+        EMarte,
+        EMerkure,
+        EEnjte,
+        EPremte,
+        EShtune,
+        EDiele 
+    }
 }

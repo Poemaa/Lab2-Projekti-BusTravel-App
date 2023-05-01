@@ -1,4 +1,7 @@
-﻿using System.Collections;
+﻿using BusRoute.Data.Repository.Models;
+using BusRoute.Data.Repository.Models.Interfaces;
+using BusRoute.Services.Interfaces;
+using System.Collections;
 
 namespace BusRoute.Data.UnitOfWork
 {
@@ -7,6 +10,9 @@ namespace BusRoute.Data.UnitOfWork
         private Hashtable _repositories;
         private readonly BusRouteDbContext _dbContext;
 
+        #region [Repositories]
+        public IBusLineRepository BusLineRepository => (IBusLineRepository)InstantiateRepository<IBusLineRepository>();
+        #endregion
         #region [Repositories]
         //public IBranchRepository BranchRepository => (IBranchRepository)InstantiateRepository<BranchRepository>();
         //public IBusinessBizcodeIdMappingRepository BusinessBizcodeIdMappingRepository => (IBusinessBizcodeIdMappingRepository)InstantiateRepository<BusinessBizcodeIdMappingRepository>();
