@@ -12,6 +12,10 @@ namespace BusRoute.Data.UnitOfWork
 
         #region [Repositories]
         public IBusLineRepository BusLineRepository => (IBusLineRepository)InstantiateRepository<IBusLineRepository>();
+        public ILocationRepository LocationRepository => (ILocationRepository)InstantiateRepository<ILocationRepository>();
+        public ICompanyRepository CompanyRepository => (ICompanyRepository)InstantiateRepository<ICompanyRepository>();
+        public IBusItineraryRepository BusItineraryRepository => (IBusItineraryRepository)InstantiateRepository<IBusItineraryRepository>();
+
         #endregion
         #region [Repositories]
         //public IBranchRepository BranchRepository => (IBranchRepository)InstantiateRepository<BranchRepository>();
