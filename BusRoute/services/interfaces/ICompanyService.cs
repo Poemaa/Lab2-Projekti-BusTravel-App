@@ -2,7 +2,7 @@
 
 namespace BusRoute.Services.Interfaces
 {
-    public interface ICompanyServices
+    public interface ICompanyService
     {
         Task<Company> GetByIdAsync(int id);
     }
