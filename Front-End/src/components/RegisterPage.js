@@ -24,11 +24,13 @@ const RegisterPage = () => {
   };
 
   return (
-    <div className="register-container">
-      <h1>Regjistrohu</h1>
+    <div id= 'contentRegister' style={{display:'flex', flexDirection:'row'}}>
+    <div className="register-container" style={{display:"flex", marginTop:"18px",marginRight:'90px'}}>
+      <h1 style={{fontSize:'28px',color:'#003366'}}>Regjistrohu</h1>
       <form onSubmit={handleSubmit}>
-        <div className="form-group">
-          <label htmlFor="firstName" className="form-label">Emri:</label>
+        
+        <div className="form-group" style={{paddingTop:'0px'}}>
+          <label htmlFor="firstName" className="form-label" style={{color:'#003366'}}>Emri:</label>
           <input
             type="text"
             id="firstName"
@@ -40,7 +42,7 @@ const RegisterPage = () => {
         </div>
 
         <div className="form-group">
-          <label htmlFor="lastName" className="form-label">Mbiemri:</label>
+          <label htmlFor="lastName" className="form-label" style={{color:'#003366'}}>Mbiemri:</label>
           <input
             type="text"
             id="lastName"
@@ -52,7 +54,7 @@ const RegisterPage = () => {
         </div>
 
         <div className="form-group">
-          <label htmlFor="email" className="form-label">Email:</label>
+          <label htmlFor="email" className="form-label" style={{color:'#003366'}}>Email:</label>
           <input
             type="email"
             id="email"
@@ -64,7 +66,7 @@ const RegisterPage = () => {
         </div>
 
         <div className="form-group">
-          <label htmlFor="password" className="form-label">Fjalekalimi:</label>
+          <label htmlFor="password" className="form-label" style={{color:'#003366'}}>Fjalekalimi:</label>
           <input
             type="password"
             id="password"
@@ -76,7 +78,7 @@ const RegisterPage = () => {
         </div>
 
         <div className="form-group">
-          <label htmlFor="confirmPassword" className="form-label">Konfirmo fjalekalimin:</label>
+          <label htmlFor="confirmPassword" className="form-label" style={{color:'#003366'}}>Konfirmo fjalekalimin:</label>
           <input
             type="password"
             id="confirmPassword"
@@ -91,6 +93,10 @@ const RegisterPage = () => {
           Regjistrohu
         </button>
       </form>
+    </div>
+    <div style={{display:'flex', float:'right', marginRight:'250px',paddingTop:'70px'}}>
+    <img src="./images/foto1.svg" alt="fotoRegister" width={"480px"} height={"500px"} />
+    </div>
     </div>
   );
 }
