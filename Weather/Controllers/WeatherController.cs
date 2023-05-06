@@ -1,20 +1,24 @@
 using Microsoft.AspNetCore.Mvc;
+using Weather.Services.Interfaces;
 
-[Route("api/weather")]
-[ApiController]
-public class WeatherController : ControllerBase
+namespace Weather.Controllers
 {
-    private readonly IWeatherService _weatherService;
-
-    public WeatherController(IWeatherService weatherService)
+    [Route("api/weather")]
+    [ApiController]
+    public class WeatherController : ControllerBase
     {
-        _weatherService = weatherService;
-    }
+        private readonly IWeatherService _weatherService;
 
-    [HttpGet("{id:int}")]
-    public async Task<IActionResult> GetWeatherByCityIdAsync(int Cityid)
-    {
-        var weather = await _weatherService.GetByIdAsync(id);
-        return weather != null ? Ok(weather) : NotFound();
+        public WeatherController(IWeatherService weatherService)
+        {
+            _weatherService = weatherService;
+        }
+
+        [HttpGet("{cityid:int}")]
+        public async Task<IActionResult> GetWeatherByCityIdAsync(int cityid)
+        {
+            var weather = await _weatherService.GetByWeatherByCityIdAsync(cityid);
+            return weather != null ? Ok(weather) : NotFound();
+        }
     }
 }
