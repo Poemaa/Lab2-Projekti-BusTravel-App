@@ -16,7 +16,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Data\Repository\Generic\Models\" />
+    <Folder Include="Data\Repository\Models\" />
     <Folder Include="Models\DTOs\" />
     <Folder Include="Models\Entities\" />
   </ItemGroup>
