@@ -11,10 +11,10 @@ namespace BusRoute.Data.UnitOfWork
         private readonly BusRouteDbContext _dbContext;
 
         #region [Repositories]
-        public IBusLineRepository BusLineRepository => (IBusLineRepository)InstantiateRepository<IBusLineRepository>();
-        public ILocationRepository LocationRepository => (ILocationRepository)InstantiateRepository<ILocationRepository>();
-        public ICompanyRepository CompanyRepository => (ICompanyRepository)InstantiateRepository<ICompanyRepository>();
-        public IBusItineraryRepository BusItineraryRepository => (IBusItineraryRepository)InstantiateRepository<IBusItineraryRepository>();
+        public IBusLineRepository BusLineRepository => (IBusLineRepository)InstantiateRepository<BusLineRepository>();
+        public ILocationRepository LocationRepository => (ILocationRepository)InstantiateRepository<LocationRepository>();
+        public ICompanyRepository CompanyRepository => (ICompanyRepository)InstantiateRepository<CompanyRepository>();
+        public IBusItineraryRepository BusItineraryRepository => (IBusItineraryRepository)InstantiateRepository<BusItineraryRepository>();
 
         #endregion
         #region [Repositories]

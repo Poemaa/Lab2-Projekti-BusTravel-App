@@ -1,10 +1,15 @@
 using BusRoute.Data;
+using BusRoute.Data.UnitOfWork;
 using BusRoute.Middlewares;
+using BusRoute.services.implementations;
+using BusRoute.Services.Interfaces;
 using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
+builder.Services.AddScoped<IUnitOfWork, UnitOfWork>();
+builder.Services.AddScoped<ILocationService, LocationService>();
 
 builder.Services.AddControllers();
 
@@ -12,7 +17,7 @@ builder.Services.AddEndpointsApiExplorer();
 
 builder.Services.AddSwaggerGen();
 
-builder.Services.AddDbContext<BusRouteDbContext>(opt => opt.UseSqlServer(builder.Configuration.GetConnectionString("SQLConnectionString")));
+builder.Services.AddDbContext<BusRouteDbContext>(opt => opt.UseSqlServer(builder.Configuration.GetConnectionString("SQLConnectionString"),x => x.UseDateOnlyTimeOnly()));
 var app = builder.Build();
 
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle

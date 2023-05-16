@@ -1,7 +1,6 @@
 ﻿using BusRoute.Models.Entities;
 using Microsoft.EntityFrameworkCore;
 
-
 namespace BusRoute.Data
 {
     public class BusRouteDbContext : DbContext
@@ -18,7 +17,15 @@ namespace BusRoute.Data
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
-
+            modelBuilder.Entity<BusLine>()
+                .HasOne(b => b.ArrivalCity)
+                .WithMany(a => a.BusRoutesArrival)
+                .OnDelete(DeleteBehavior.NoAction);
+            modelBuilder.Entity<BusLine>()
+                .HasOne(b => b.DepartureCity)
+                .WithMany(c => c.BusRoutesDeparture)
+                .OnDelete(DeleteBehavior.NoAction);
         }
     }
 }
+

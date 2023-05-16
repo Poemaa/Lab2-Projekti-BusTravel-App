@@ -39,7 +39,6 @@ namespace BusRoute.Data.Repository.Generic
         public async Task DeleteWithConditionAsync(Expression<Func<Entity, bool>> condition
                                                   , CancellationToken cancellationToken = default) => await _dbContext.Set<Entity>().Where(condition).ExecuteDeleteAsync(cancellationToken);
         public void Update(Entity entity) => _dbContext.Set<Entity>().Update(entity);
-
         public void UpdateRange(List<Entity> entities) => _dbContext.Set<Entity>().UpdateRange(entities);
     }
 }

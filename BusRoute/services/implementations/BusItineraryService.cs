@@ -18,7 +18,7 @@ namespace BusRoute.Services.Implementations
         public async Task<BusItinerary> GetByIdAsync(int id)
         {
             var itinerary = await _unitOfWork.BusItineraryRepository
-                                                         .GetById(a => a.ItineraryId == id)
+                                                         .GetById(a => a.Id == id)
                                                          .FirstOrDefaultAsync();
             return itinerary;
         }
