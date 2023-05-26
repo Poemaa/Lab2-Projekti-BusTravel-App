@@ -2,6 +2,8 @@ using BusRoute.Data;
 using BusRoute.Data.UnitOfWork;
 using BusRoute.Middlewares;
 using BusRoute.services.implementations;
+using BusRoute.services.Implementations;
+//using BusRoute.Services.Implementations;
 using BusRoute.Services.Interfaces;
 using Microsoft.EntityFrameworkCore;
 
@@ -10,6 +12,10 @@ var builder = WebApplication.CreateBuilder(args);
 // Add services to the container.
 builder.Services.AddScoped<IUnitOfWork, UnitOfWork>();
 builder.Services.AddScoped<ILocationService, LocationService>();
+builder.Services.AddScoped<ICompanyService, CompanyService>();
+builder.Services.AddScoped<IBusItineraryService, BusItineraryService>();
+builder.Services.AddScoped<IBusLineService, BusLineService>();
+
 
 builder.Services.AddControllers();
 

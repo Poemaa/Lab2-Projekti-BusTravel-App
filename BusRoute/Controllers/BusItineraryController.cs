@@ -1,5 +1,7 @@
-﻿using BusRoute.Models.Entities;
-using BusRoute.Services.Implementations;
+﻿using BusRoute.Models.DTOs;
+using BusRoute.Models.Entities;
+using BusRoute.services.Implementations;
+//using BusRoute.Services.Implementations;
 using BusRoute.Services.Interfaces;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
@@ -19,14 +21,40 @@ namespace BusRoute.Controllers
         {
             _busItineraryService = busItineraryService;
         }
+        [HttpGet("busItineraries")]
+        public async Task<IActionResult> GetAllBusItineraries()
+        {
+            var busItineraries = await _busItineraryService.GetAllBusItineraries();
+            return busItineraries != null ? Ok(busItineraries) : NotFound();
+        }
 
-        [HttpGet("{id:int}")]
+        [HttpGet("busItinerary/{id:int}")]
         public async Task<IActionResult> GetBusItineraryByIdAsync(int id)
         {
             var busItinerary = await _busItineraryService.GetByIdAsync(id);
             return busItinerary != null ? Ok(busItinerary) : NotFound();
         }
 
+        [HttpPost("busItinerary")]
+        public async Task<IActionResult> AddBusItinerary(BusItineraryDTO busItineraryDto)
+        {
+            var created = await _busItineraryService.AddBusItinerary(busItineraryDto);
+            return created != null ? Ok("BusItinerary created") : BadRequest();
+        }
+
+        [HttpPut("busItinerary")]
+        public async Task<IActionResult> EditBusItinerary([FromForm] BusItineraryDTO busItineraryDto)
+        {
+            var edited = await _busItineraryService.EditBusItinerary(busItineraryDto);
+            return edited != null ? Ok("BusItinerary edited successfully") : BadRequest();
+        }
+
+        [HttpDelete("busItinerary/{busItineraryId:int}")]
+        public async Task<IActionResult> DeleteBusItineraryById(int busItineraryId)
+        {
+            var deleted = await _busItineraryService.DeleteBusItinerary(busItineraryId);
+            return deleted != null ? Ok("BusItinerary deleted") : BadRequest();
+        }
 
     }
 }

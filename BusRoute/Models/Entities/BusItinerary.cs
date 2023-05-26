@@ -11,7 +11,7 @@ namespace BusRoute.Models.Entities
         {
             this.BusLines = new HashSet<BusLine>();
         }
-        public int Id { get; set; }
+        public int BusItineraryId { get; set; }
         public DateTime Date { get; set; }
         public TimeOnly DepartureTime { get; set; }
         public TimeOnly ArrivalTime { get; set; }

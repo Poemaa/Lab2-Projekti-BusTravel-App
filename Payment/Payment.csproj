@@ -19,6 +19,7 @@
     <Folder Include="Controllers\" />
     <Folder Include="Data\UnitOfWork\" />
     <Folder Include="Data\Repository\" />
+    <Folder Include="Models\DTO\" />
   </ItemGroup>
 
 </Project>
