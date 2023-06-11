@@ -1,9 +1,5 @@
-﻿using BusRoute.Models.Entities;
-using BusRoute.Services.Interfaces;
-using Microsoft.AspNetCore.Authorization;
-using Microsoft.AspNetCore.Http;
+﻿using BusRoute.Services.Interfaces;
 using Microsoft.AspNetCore.Mvc;
-using System.Data;
 using BusRoute.Models.DTOs;
 
 namespace BusRoute.Controllers
@@ -54,5 +50,5 @@ namespace BusRoute.Controllers
                 return edited != null ? Ok("City edited successfully") : BadRequest();
             }
 
-        }
     }
+}

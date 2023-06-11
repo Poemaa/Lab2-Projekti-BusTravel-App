@@ -1,4 +1,5 @@
 ﻿using BusRoute.Models.DTOs;
+using BusRoute.Models.Entities;
 using BusRoute.Services.Interfaces;
 using Microsoft.AspNetCore.Mvc;
 
@@ -37,9 +38,9 @@ namespace BusRoute.Controllers
         }
 
         [HttpPut("company")]
-        public async Task<IActionResult> EditCompany([FromForm] CompanyDTO companyDto)
+        public async Task<IActionResult> EditCompany([FromForm] Company companyToEdit)
         {
-            var edited = await _companyService.EditCompany(companyDto);
+            var edited = await _companyService.EditCompany(companyToEdit);
             return edited != null ? Ok("Company edited successfully") : BadRequest();
         }
 

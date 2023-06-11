@@ -29,6 +29,7 @@ namespace BusRoute.services.implementations
             var location = await _unitOfWork.LocationRepository
                                                          .GetById(a => a.LocationId == id)
                                                          .FirstOrDefaultAsync();
+            if (location is null) return null;
             LocationDTO dto = new LocationDTO
             {
                 LocationId = location.LocationId,

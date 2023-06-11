@@ -14,12 +14,11 @@ namespace BusReservation.Services.Implementations
             _unitOfWork = unitOfWork;
         }
 
-        public async Task<Reservation> GetByIdAsync(int id)
+        public async Task<Reservation?> GetByIdAsync(int id)
         {
-            var reservation = await _unitOfWork.ReservationRepository
-                                                         .GetById(a => a.Id == id)
+            return await _unitOfWork.ReservationRepository
+                                                         .GetById(a => a.ReservationId == id)
                                                          .FirstOrDefaultAsync();
-            return reservation;
         }
     }
 }
