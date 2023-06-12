@@ -3,27 +3,30 @@ import SpinTheWheel from "./SpinTheWheel";
 function AboutUsPage()
 {
 
-  return(
+  return (
     <main>
       <div className="firstBox">
-        <div className="firstfirstBox">NUK DINI SE KU TE SHKONI</div>
+        <div className="firstfirstBox"> <h2>NUK DINI SE KU TE SHKONI </h2> Provoni Wheel dhe vendosni destinacionin tuaj te rradhes<br></br> Kosova ofron shume destinacione te ndryshme me Lorem ipsum dolor <br></br>sit amet, consectetur adipiscing elit, sed do eiusmod<br></br> tempor incididunt ut labore et dolore magna aliqua.<br></br> Ut enim ad minim veniam, quis nostrud exercitation <br></br>ullamco laboris nisi ut aliquip ex ea commodo consequat.</div>
         <div className="spinTheWheel">
           <SpinTheWheel />
         </div>
       </div>
 
+      <h2>Prishtina</h2>
       <div className="secondBox">
-      <li>kafet</li>
-      <li>kafet</li>
-      <li>kafet</li>
-      <li>kafet</li>
+        
+        <li>Newborn</li>
+        <li>Kafet e Vogla</li>
+        <li>Muzeu</li>
+        <li>Sheshi</li>
       </div>
 
+      <h2>Prizreni</h2>
       <div className="thirdBox">
-      <li>kafet</li>
-      <li>kafet</li>
-      <li>kafet</li>
-      <li>kafet</li>
+        <li>Shatervani</li>
+        <li>Kalaja</li>
+        <li>kafet</li>
+        <li>kafet</li>
       </div>
 
     </main>
@@ -61,7 +64,7 @@ function AboutUsPage()
     </div>
     );
 **/
-  
+
 }
 
 export default <AboutUsPage />;

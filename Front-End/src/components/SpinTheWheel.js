@@ -4,14 +4,14 @@ import React, { useState } from 'react';
 const SpinTheWheel = () =>
 {
     const wheelOptions = [
-        'Prishtine',
-        'Prizren',
-        'Istog',
-        'Mitrovice',
-        'Gjakove',
-        'Ferizaj',
-        'Peje',
-        'Gjilan'
+        'Prishtine!',
+        'Prizren!',
+        'Istog!',
+        'Mitrovice!',
+        'Gjakove!',
+        'Ferizaj!',
+        'Peje!',
+        'Gjilan!'
     ];
 
     const [selectedOption, setSelectedOption] = useState(null);
