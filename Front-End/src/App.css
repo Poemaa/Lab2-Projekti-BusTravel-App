@@ -13,6 +13,9 @@
     animation: App-logo-spin infinite 20s linear;
   }
 }
+html {
+  scroll-behavior: smooth;
+  }
 
 .App-header {
   background-color: #282c34;
@@ -264,6 +267,8 @@ button:hover {
   font-family: Inter;
   font-weight: 500;
   font-size: 20px;
+ 
+  
 
 }
 .home-two{
@@ -276,6 +281,9 @@ button:hover {
   font-family: Inter;
   padding-top: 20px;
   margin-top: 60px;
+  background-image: url('./bg1.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
  
 }
 #boxDiv{
@@ -283,7 +291,6 @@ button:hover {
   flex-direction: row;
   justify-content: space-evenly;
   align-items: center;
-  background-color: lightgray;
   width: 100%;
 
 }
@@ -294,10 +301,77 @@ button:hover {
   justify-content: center;
   align-items: center;
   background-color: white;
-  width: 250px;
-  height: 250px;
+  width: 300px;
+  height: 300px;
   padding: 30px;
   border-radius: 30px;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 
+}
+
+.box:hover {
+  transform: scale(1.2); /* (150% zoom - Note: if the zoom is too large, it will go outside of the viewport) */
+  }
+
+.Videodiv{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+
+}
+
+#video{
+  display: flex;
+  flex-direction: column;
+  justify-content: left;
+  align-items: center;
+  margin-left: 12px;
+}
+ .companyInfo{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  margin-right: -90px;
+  margin-left: -90px;
+ }
+
+.fotoComp{
+  display: flex;
+  flex-direction: column;
+} 
+
+.fotoComp h3{
+  background-color: #1c3d6e;
+  color:white;
+  font-family: "Inter";
+  font-size: 20px;
+  border-radius: 30px;
+  width: 350px;
+  text-align: center;
+  align-items: center;
+  height: 40px;
+  padding: 6px;
+  margin-left: 30px;
+  
+}
+
+.map{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.quotes{
+  display: flex;
+  flex-direction: row;
+
+}
+
+#color{
+  background-color: #1a3264;
+  width: 90px;
+  height: 260px;
+  margin-top: 100px;
 }

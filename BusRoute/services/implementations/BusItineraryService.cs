@@ -23,7 +23,6 @@ namespace BusRoute.services.Implementations
             return await _unitOfWork.BusItineraryRepository.GetAll().Select(c => new BusItineraryDTO
             {
                 BusItineraryId = c.BusItineraryId,
-                Date = c.Date,
                 DepartureTime = c.DepartureTime,
                 ArrivalTime = c.ArrivalTime,
                 Duration = c.Duration
@@ -39,7 +38,6 @@ namespace BusRoute.services.Implementations
             BusItineraryDTO busItinerarydto = new BusItineraryDTO
             {
                 BusItineraryId = busItinerary.BusItineraryId,
-                Date = busItinerary.Date,
                 DepartureTime = busItinerary.DepartureTime,
                 ArrivalTime = busItinerary.ArrivalTime,
                 Duration = busItinerary.Duration
@@ -51,12 +49,14 @@ namespace BusRoute.services.Implementations
         {
             BusItinerary busItinerary = new BusItinerary
             {
-                Date = busItineraryDto.Date,
+                
                 DepartureTime = busItineraryDto.DepartureTime,
                 ArrivalTime = busItineraryDto.ArrivalTime,
-                Duration = TimeSpan.Parse(busItineraryDto.ArrivalTime) - TimeSpan.Parse(busItineraryDto.DepartureTime)
+                Duration = TimeSpan.Parse(busItineraryDto.ArrivalTime) - TimeSpan.Parse(busItineraryDto.DepartureTime),
+                DaysOfWeek = busItineraryDto.DaysOfWeek,
 
-        };
+
+            };
 
             await _unitOfWork.BusItineraryRepository.CreateAsync(busItinerary);
             return await _unitOfWork.CompleteAsync();
@@ -69,15 +69,14 @@ namespace BusRoute.services.Implementations
             return await _unitOfWork.CompleteAsync();
         }
 
-        public async Task<bool> EditBusItinerary(BusItineraryDTO busItineraryDto)
+        public async Task<bool> EditBusItinerary(BusItineraryDTO busItineraryToEdit)
         {
             BusItinerary busItinerary = new BusItinerary
             {
-                BusItineraryId = busItineraryDto.BusItineraryId,
-                Date = busItineraryDto.Date,
-                DepartureTime = busItineraryDto.DepartureTime,
-                ArrivalTime = busItineraryDto.ArrivalTime,
-                Duration = TimeSpan.Parse(busItineraryDto.ArrivalTime) - TimeSpan.Parse(busItineraryDto.DepartureTime)
+                BusItineraryId = busItineraryToEdit.BusItineraryId,
+                DepartureTime = busItineraryToEdit.DepartureTime,
+                ArrivalTime = busItineraryToEdit.ArrivalTime,
+                Duration = TimeSpan.Parse(busItineraryToEdit.ArrivalTime) - TimeSpan.Parse(busItineraryToEdit.DepartureTime)
             };
 
 

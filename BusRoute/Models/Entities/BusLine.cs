@@ -24,7 +24,7 @@ namespace BusRoute.Models.Entities
         
     }
 
-    public enum DitetEJaves
+    public enum DitetEJavess
     {
         Hene,
         Marte,
