@@ -9,9 +9,9 @@ using Microsoft.AspNetCore.Identity;
 using Microsoft.CodeAnalysis;
 
 
-namespace BusFeedback.services.Implementations
+namespace BusFeedback.services.implementations
 {
-    public class FeedbackService : IFeedbackRepository
+    public class FeedbackService : IFeedbackService
     {
         private readonly IUnitOfWork _unitOfWork;
 
@@ -62,7 +62,7 @@ namespace BusFeedback.services.Implementations
             return await _unitOfWork.CompleteAsync();
         }
 
-        public async Task<bool> DeleteBusLine(int feedbackId)
+        public async Task<bool> DeleteFeedback(int feedbackId)
         {
             var feedback = await _unitOfWork.FeedbackRepository.GetById(a => a.FeedbackId == feedbackId).FirstOrDefaultAsync();
             _unitOfWork.FeedbackRepository.Delete(feedback ?? throw new InvalidOperationException());
@@ -83,6 +83,6 @@ namespace BusFeedback.services.Implementations
             return await _unitOfWork.CompleteAsync();
         }
 
-     
+       
     }
 }

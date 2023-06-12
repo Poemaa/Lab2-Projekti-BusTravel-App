@@ -1,7 +1,7 @@
 using BusFeedback.Data;
 using BusFeedback.Data.UnitOfWork;
 using BusFeedback.Middlewares;
-using BusFeedback.services.Implementations;
+using BusFeedback.services.implementations;
 //using BusFeedback.Services.Implementations;
 using BusFeedback.Services.Interfaces;
 using Microsoft.EntityFrameworkCore;
@@ -20,7 +20,7 @@ builder.Services.AddEndpointsApiExplorer();
 
 builder.Services.AddSwaggerGen();
 
-builder.Services.AddDbContext<BusFeedbackDbContext>(opt => opt.UseSqlServer(builder.Configuration.GetConnectionString("SQLConnectionString"), x => x.UseDateOnlyTimeOnly()));
+builder.Services.AddDbContext<BusFeedbackDbContext>(opt => opt.UseSqlServer(builder.Configuration.GetConnectionString("SQLConnectionString")));
 var app = builder.Build();
 
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle

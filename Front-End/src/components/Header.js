@@ -12,6 +12,9 @@ const Header = () => {
         </Link>
       </div>
       <div style={{ display: 'flex', gap: '10px' }}>
+      <Link to="/">
+      <button style={{ cursor: 'pointer', border: 'none', backgroundColor: '#243b55', color: 'white', padding: '10px', fontSize:'17px', fontFamily:'Inter'}}>Faqja Kryesore</button>
+      </Link>
         <Link to="/aboutus">
           <button style={{ cursor: 'pointer', border: 'none', backgroundColor: '#243b55', color: 'white', padding: '10px', fontSize:'17px', fontFamily:'Inter'}}>Rreth nesh</button>
         </Link>
