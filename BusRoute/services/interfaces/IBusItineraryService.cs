@@ -8,7 +8,7 @@ namespace BusRoute.Services.Interfaces
     public interface IBusItineraryService
     {
         Task<List<BusItineraryDTO>> GetAllBusItineraries();
-        Task<BusItineraryDTO> GetByIdAsync(int id);
+        Task<BusItineraryDTO?> GetByIdAsync(int id);
         Task<bool> AddBusItinerary(BusItineraryDTO busItineraryDto);
         Task<bool> DeleteBusItinerary(int busItineraryId);
         Task<bool> EditBusItinerary(BusItineraryDTO busItineraryDto);

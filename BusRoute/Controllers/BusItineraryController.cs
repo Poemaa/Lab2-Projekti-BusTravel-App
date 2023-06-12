@@ -36,7 +36,7 @@ namespace BusRoute.Controllers
         }
 
         [HttpPost("busItinerary")]
-        public async Task<IActionResult> AddBusItinerary(BusItineraryDTO busItineraryDto)
+        public async Task<IActionResult> AddBusItinerary([FromBody] BusItineraryDTO busItineraryDto)
         {
             var created = await _busItineraryService.AddBusItinerary(busItineraryDto);
             return created != null ? Ok("BusItinerary created") : BadRequest();

@@ -22,6 +22,7 @@ namespace BusRoute.services.Implementations
         {
             return await _unitOfWork.BusItineraryRepository.GetAll().Select(c => new BusItineraryDTO
             {
+                BusItineraryId = c.BusItineraryId,
                 Date = c.Date,
                 DepartureTime = c.DepartureTime,
                 ArrivalTime = c.ArrivalTime,
@@ -34,6 +35,7 @@ namespace BusRoute.services.Implementations
             var busItinerary = await _unitOfWork.BusItineraryRepository
                                                          .GetById(a => a.BusItineraryId == id)
                                                          .FirstOrDefaultAsync();
+            if (busItinerary is null) return null;
             BusItineraryDTO busItinerarydto = new BusItineraryDTO
             {
                 BusItineraryId = busItinerary.BusItineraryId,
@@ -52,9 +54,10 @@ namespace BusRoute.services.Implementations
                 Date = busItineraryDto.Date,
                 DepartureTime = busItineraryDto.DepartureTime,
                 ArrivalTime = busItineraryDto.ArrivalTime,
-                Duration = busItineraryDto.Duration
+                Duration = TimeSpan.Parse(busItineraryDto.ArrivalTime) - TimeSpan.Parse(busItineraryDto.DepartureTime)
 
-            };
+        };
+
             await _unitOfWork.BusItineraryRepository.CreateAsync(busItinerary);
             return await _unitOfWork.CompleteAsync();
         }
@@ -74,9 +77,10 @@ namespace BusRoute.services.Implementations
                 Date = busItineraryDto.Date,
                 DepartureTime = busItineraryDto.DepartureTime,
                 ArrivalTime = busItineraryDto.ArrivalTime,
-                Duration = busItineraryDto.Duration
-
+                Duration = TimeSpan.Parse(busItineraryDto.ArrivalTime) - TimeSpan.Parse(busItineraryDto.DepartureTime)
             };
+
+
             _unitOfWork.BusItineraryRepository.Update(busItinerary);
             return await _unitOfWork.CompleteAsync();
         }
