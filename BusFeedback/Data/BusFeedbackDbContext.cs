@@ -1,5 +1,5 @@
-﻿using Microsoft.EntityFrameworkCore;
-
+﻿using BusFeedback.Models.Entities;
+using Microsoft.EntityFrameworkCore;
 
 namespace BusFeedback.Data
 {
@@ -9,11 +9,8 @@ namespace BusFeedback.Data
         {
         }
 
+        public DbSet<Feedback> Feedbacks { get; set; }
 
-
-        protected override void OnModelCreating(ModelBuilder modelBuilder)
-        {
-
-        }
     }
 }
+

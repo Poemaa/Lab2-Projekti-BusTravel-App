@@ -1,4 +1,7 @@
-﻿using System.Collections;
+﻿using BusFeedback.Data.Repository.Models;
+using BusFeedback.Data.Repository.Models.Interfaces;
+using BusFeedback.Services.Interfaces;
+using System.Collections;
 
 namespace BusFeedback.Data.UnitOfWork
 {
@@ -7,6 +10,11 @@ namespace BusFeedback.Data.UnitOfWork
         private Hashtable _repositories;
         private readonly BusFeedbackDbContext _dbContext;
 
+        #region [Repositories]
+        public IFeedbackRepository FeedbackRepository => (IFeedbackRepository)InstantiateRepository<FeedbackRepository>();
+  
+
+        #endregion
         #region [Repositories]
         //public IBranchRepository BranchRepository => (IBranchRepository)InstantiateRepository<BranchRepository>();
         //public IBusinessBizcodeIdMappingRepository BusinessBizcodeIdMappingRepository => (IBusinessBizcodeIdMappingRepository)InstantiateRepository<BusinessBizcodeIdMappingRepository>();
