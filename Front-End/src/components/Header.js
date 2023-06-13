@@ -12,17 +12,17 @@ const Header = () => {
         </Link>
       </div>
       <div style={{ display: 'flex', gap: '10px' }}>
-      <Link to="/">
-      <button style={{ cursor: 'pointer', border: 'none', backgroundColor: '#243b55', color: 'white', padding: '10px', fontSize:'17px', fontFamily:'Inter'}}>Faqja Kryesore</button>
+      <Link to="/" style={{textDecoration:'none'}}>
+      <button style={{ cursor: 'pointer', border: 'none', backgroundColor: '#243b55', color: 'white', padding: '10px', fontSize:'17px', fontFamily:'Inter',textDecoration:'none'}}>Faqja Kryesore</button>
       </Link>
-        <Link to="/aboutus">
-          <button style={{ cursor: 'pointer', border: 'none', backgroundColor: '#243b55', color: 'white', padding: '10px', fontSize:'17px', fontFamily:'Inter'}}>Rreth nesh</button>
+        <Link to="/aboutus" style={{textDecoration:'none'}}>
+          <button style={{ cursor: 'pointer', border: 'none', backgroundColor: '#243b55', color: 'white', padding: '10px', fontSize:'17px', fontFamily:'Inter',textDecoration:'none'}}>Rreth nesh</button>
         </Link>
-        <Link to="/login">
-          <button style={{ cursor: 'pointer', border: 'none', backgroundColor: '#243b55', color: 'white', padding: '10px', fontSize:'17px', fontFamily:'Inter' }}>Kyçuni</button>
+        <Link to="/login" style={{textDecoration:'none'}}>
+          <button style={{ cursor: 'pointer', border: 'none', backgroundColor: '#243b55', color: 'white', padding: '10px', fontSize:'17px', fontFamily:'Inter',textDecoration:'none' }}>Kyçuni</button>
         </Link>
-        <Link to="/register">
-          <button style={{ cursor: 'pointer', border: 'none', backgroundColor: '#243b55', color: 'white', padding: '10px', fontSize:'17px', fontFamily:'Inter' }}>Regjistrohu</button>
+        <Link to="/register" style={{textDecoration:'none'}}>
+          <button style={{ cursor: 'pointer', border: 'none', backgroundColor: '#243b55', color: 'white', padding: '10px', fontSize:'17px', fontFamily:'Inter',textDecoration:'none' }}>Regjistrohu</button>
         </Link>
       </div>
     </header>

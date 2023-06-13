@@ -20,14 +20,14 @@ function Home() {
        </p>
        
        
-       <a href=""><button style={{width:'290px', textAlign:'center',fontFamily:'Inter',fontSize:'18px',opacity:'85%',borderRadius:'50px'}}>Rezervo bileten tende tani</button></a>   <br></br>     
+       <a href="" style={{textDecoration:'none'}}><button style={{width:'290px', textAlign:'center',fontFamily:'Inter',fontSize:'18px',opacity:'85%',borderRadius:'50px'}}>Rezervo bileten tende tani</button></a>   <br></br>     
       
        <br></br>
-       <br></br>
-       <br></br>
-       <a href="#infoComp"><button style={{width:'450px', textAlign:'center',fontFamily:'Inter',fontSize:'18px',opacity:'85%'}}>Meso me teper rreth kompanive</button></a>   <br></br>     
-      <br></br>
-       <a href="#harta"><button style={{width:'450px', textAlign:'center',fontFamily:'Inter',fontSize:'18px',opacity:'85%'}}>Shiko harten per orientim</button></a>        
+      
+      
+       <a href="#infoComp" style={{textDecoration:'none'}}><button style={{width:'450px', textAlign:'center',fontFamily:'Inter',fontSize:'18px',opacity:'85%', textDecoration:'none'}}>Meso me teper rreth kompanive</button></a>   <br></br>     
+   
+       <a href="#harta" style={{textDecoration:'none'}}><button style={{width:'450px', textAlign:'center',fontFamily:'Inter',fontSize:'18px',opacity:'85%'}}>Shiko harten per orientim</button></a>     <br></br>   
        </div>
           <div id="map" style={{display:'flex', float:'left',paddingTop:'120px'}}>
         <img src="./images/kosovoMap.avif" alt="Kosova" width={"450"} height={"450"} />

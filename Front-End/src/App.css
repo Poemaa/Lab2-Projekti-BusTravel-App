@@ -493,3 +493,28 @@ button:disabled {
   opacity: 0.5;
   cursor: not-allowed;
 }
+
+.wheel{
+ 
+    width: 310px;
+    height: 160px;
+    background: rgb(232, 194, 58);
+    position: relative;
+    -moz-border-radius: 10px;
+    -webkit-border-radius: 10px;
+    border-radius: 10px;
+    border-color: rgb(232, 194, 58);
+  
+}
+
+.wheel:before {
+  content: "";
+  position: absolute;
+  right: 100%;
+  top: 60px;
+  width: 0;
+  height: 0;
+  border-top: 19px solid transparent;
+  border-right: 36px solid rgb(232, 194, 58);
+  border-bottom: 19px solid transparent;
+}

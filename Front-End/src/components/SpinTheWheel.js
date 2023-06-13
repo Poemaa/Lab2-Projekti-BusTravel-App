@@ -30,14 +30,14 @@ const SpinTheWheel = () =>
 
     return (
         <div>
-            <h1>Spin the Wheel</h1>
+            <h1 style={{fontFamily:'Inter'}}>Spin the Wheel</h1>
             <div className="wheel">
                 {isSpinning ? (
                     <div className="spinner">
                         <div className="inner-spinner"></div>
                     </div>
                 ) : (
-                    <div className="selected-option">{selectedOption}</div>
+                    <div className="selected-option" style={{fontFamily:'Inter', color:'#1a3264'}}>{selectedOption}</div>
                 )}
             </div>
             <button onClick={spinWheel} disabled={isSpinning}>

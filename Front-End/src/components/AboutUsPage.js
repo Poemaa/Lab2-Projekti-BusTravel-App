@@ -6,7 +6,12 @@ function AboutUsPage()
   return (
     <main>
       <div className="firstBox">
-        <div className="firstfirstBox"> <h2>NUK DINI SE KU TE SHKONI </h2> Provoni Wheel dhe vendosni destinacionin tuaj te rradhes<br></br> Kosova ofron shume destinacione te ndryshme me Lorem ipsum dolor <br></br>sit amet, consectetur adipiscing elit, sed do eiusmod<br></br> tempor incididunt ut labore et dolore magna aliqua.<br></br> Ut enim ad minim veniam, quis nostrud exercitation <br></br>ullamco laboris nisi ut aliquip ex ea commodo consequat.</div>
+        <div className="firstfirstBox" style={{fontFamily:'Inter'}}> <h2>NUK DINI SE KU TE SHKONI? </h2>
+      <br></br>  <p style={{fontFamily:'Inter'}}>Provoni Wheel dhe vendosni destinacionin tuaj te rradhes<br></br> Kosova ofron shume destinacione te ndryshme me Lorem ipsum dolor 
+        <br></br>sit amet, consectetur adipiscing elit, sed do eiusmod<br></br>
+         tempor incididunt ut labore et dolore magna aliqua.<br></br> Ut enim ad minim veniam, quis nostrud exercitation 
+         <br></br>ullamco laboris nisi ut aliquip ex ea commodo consequat. </p> 
+         </div>
         <div className="spinTheWheel">
           <SpinTheWheel />
         </div>
