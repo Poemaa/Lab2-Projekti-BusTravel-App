@@ -6,6 +6,7 @@ import LoginPage from './components/LoginPage';
 import AboutUsPage from './components/AboutUsPage';
 import RegisterPage from "./components/RegisterPage";
 import Home from "./components/Home";
+import Location from "./components/Location";
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 
  
@@ -19,6 +20,7 @@ function App() {
           <Route path="/login" element={LoginPage} />
           <Route path="/aboutus" element={AboutUsPage} />
           <Route path="/register" element={RegisterPage} />
+          <Route path="/location" element={Location}/>
         </Routes>
         <Footer />
       </Router>
