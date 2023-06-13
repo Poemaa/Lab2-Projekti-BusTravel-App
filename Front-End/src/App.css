@@ -13,9 +13,10 @@
     animation: App-logo-spin infinite 20s linear;
   }
 }
+
 html {
   scroll-behavior: smooth;
-  }
+}
 
 .App-header {
   background-color: #282c34;
@@ -28,14 +29,14 @@ html {
   color: white;
   height: 50px;
 
-  
+
 }
 
 
 
 .App-link {
   color: #61dafb;
-  
+
 }
 
 @keyframes App-logo-spin {
@@ -65,8 +66,8 @@ body {
   background-color: #1A263F;
   padding: 20px;
   color: #fff;
- 
-  
+
+
 }
 
 .logo {
@@ -79,7 +80,7 @@ nav ul {
   list-style: none;
   margin: 0;
   padding: 0;
-  
+
 }
 
 nav li {
@@ -232,7 +233,7 @@ button:hover {
   margin-top: 10px;
 }
 
-.page{
+.page {
   padding-top: 1%;
   padding-left: 26%;
   padding-right: 26%;
@@ -240,26 +241,28 @@ button:hover {
   flex-direction: column;
   align-items: flex-start;
 }
-.company{
+
+.company {
   display: flex;
   flex-direction: row;
 }
 
-.page p{
+.page p {
   text-align: left;
   padding-right: 3%;
 }
 
 /* home styles */
-.home-content{
+.home-content {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  
+
 
 }
-.home-one{
+
+.home-one {
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -267,11 +270,12 @@ button:hover {
   font-family: Inter;
   font-weight: 500;
   font-size: 20px;
- 
-  
+
+
 
 }
-.home-two{
+
+.home-two {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -284,9 +288,10 @@ button:hover {
   background-image: url('./bg1.jpg');
   background-repeat: no-repeat;
   background-size: cover;
- 
+
 }
-#boxDiv{
+
+#boxDiv {
   display: flex;
   flex-direction: row;
   justify-content: space-evenly;
@@ -295,7 +300,7 @@ button:hover {
 
 }
 
-.box{
+.box {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -310,10 +315,11 @@ button:hover {
 }
 
 .box:hover {
-  transform: scale(1.2); /* (150% zoom - Note: if the zoom is too large, it will go outside of the viewport) */
-  }
+  transform: scale(1.2);
+  /* (150% zoom - Note: if the zoom is too large, it will go outside of the viewport) */
+}
 
-.Videodiv{
+.Videodiv {
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -321,30 +327,31 @@ button:hover {
 
 }
 
-#video{
+#video {
   display: flex;
   flex-direction: column;
   justify-content: left;
   align-items: center;
   margin-left: 12px;
 }
- .companyInfo{
+
+.companyInfo {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
   margin-right: -90px;
   margin-left: -90px;
- }
+}
 
-.fotoComp{
+.fotoComp {
   display: flex;
   flex-direction: column;
-} 
+}
 
-.fotoComp h3{
+.fotoComp h3 {
   background-color: #1c3d6e;
-  color:white;
+  color: white;
   font-family: "Inter";
   font-size: 20px;
   border-radius: 30px;
@@ -354,24 +361,135 @@ button:hover {
   height: 40px;
   padding: 6px;
   margin-left: 30px;
-  
+
 }
 
-.map{
+.map {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
 }
 
-.quotes{
+.quotes {
   display: flex;
   flex-direction: row;
 
 }
 
-#color{
+#color {
   background-color: #1a3264;
   width: 90px;
   height: 260px;
   margin-top: 100px;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  text-align: center;
+
+}
+
+.firstBox {
+  margin-top: 5%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  text-align: center;
+  margin-bottom: 5%;
+}
+
+.secondBox {
+  margin-top: 2%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  text-align: center;
+  margin-bottom: 5%;
+}
+
+.thirdBox {
+  margin-top: 2%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  text-align: center;
+}
+
+li {
+  list-style: none;
+  border: solid #0a2745;
+  border-radius: 5%;
+  padding: 5%;
+  padding-left: 7%;
+  padding-right: 7%;
+}
+
+.wheel {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100px;
+  width: 250px;
+  border: 2px solid #333;
+  border-radius: 2%;
+  margin: 20px auto;
+  position: relative;
+  background-color: #000942;
+  color: rgb(255, 221, 0);
+  
+
+}
+
+.spinner {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  animation: spin 1s infinite linear;
+}
+
+.inner-spinner {
+  border-top: 2px solid #333;
+  border-left: 2px solid #333;
+  height: 40px;
+  width: 40px;
+  border-radius: 50%;
+  position: absolute;
+  top: calc(50% - 20px);
+  left: calc(50% - 20px);
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.selected-option {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  font-size: 24px;
+}
+
+button {
+  display: block;
+  margin: 10px auto;
+  padding: 10px 20px;
+  font-size: 18px;
+  border-radius: 5px;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+}
+
+button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
 }

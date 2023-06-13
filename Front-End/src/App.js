@@ -9,8 +9,9 @@ import Home from "./components/Home";
 import Location from "./components/Location";
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 
- 
-function App() {
+
+function App()
+{
   return (
     <div className="App">
       <Router>
