@@ -375,6 +375,7 @@ button:hover {
   flex-direction: row;
 
 }
+/* Wheel*/
 
 #color {
   background-color: #1a3264;
@@ -517,4 +518,58 @@ button:disabled {
   border-top: 19px solid transparent;
   border-right: 36px solid rgb(232, 194, 58);
   border-bottom: 19px solid transparent;
+}
+
+/* WelcomeBack Page*/
+
+.welcome-content{
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-family: Inter;
+  
+}
+
+.welcome-one{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  color: #2a4d97;
+ 
+}
+
+
+.welcome-two{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Inter';
+  color: #2a4d97;
+  background-color: #EFEFEF;
+  width: 100%;
+  
+}
+.mostVisited{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+ 
+}
+
+.welcome-Buttons-one{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  text-decoration: none;
+}
+
+.welcome-Buttons-two{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  text-decoration: none;
 }
