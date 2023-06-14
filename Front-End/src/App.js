@@ -9,6 +9,7 @@ import Home from "./components/Home";
 import Location from "./components/Location";
 import AddLocation from "./components/AddLocation";
 import WelcomeBack from './components/WelcomeBack';
+import FeedbackPage from './components/FeedbackPage';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 
 
@@ -26,6 +27,7 @@ function App()
           <Route path="/location" element={Location}/>
           <Route exact path="/addLocation" element={AddLocation}/>
           <Route path="/welcomeback" element={WelcomeBack} />
+          <Route path="/feedbackpage" element={FeedbackPage} />
         </Routes>
         <Footer />
       </Router>
