@@ -17,7 +17,7 @@ function WelcomeBack() {
     </div>
     <div className="welcome-Buttons-two">
     <a href='' style={{textDecoration:'none'}}><button style={{fontFamily:'Inter',width:'220px', height:'50px'}}>Shiko Rekomandimet</button></a>
-    <a href='' style={{textDecoration:'none'}}><button id="welcome-button" style={{fontFamily:'Inter',width:'220px', height:'50px', marginBottom:'30px', marginLeft:'40px'}}>Sh&euml;no Feedback</button></a>
+    <a href="/feedbackpage" style={{textDecoration:'none'}}><button id="welcome-button" style={{fontFamily:'Inter',width:'220px', height:'50px', marginBottom:'30px', marginLeft:'40px'}}>Sh&euml;no Feedback</button></a>
     </div>
 </div>
 <div classname="welcome-picture">
