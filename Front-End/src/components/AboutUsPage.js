@@ -17,22 +17,17 @@ function AboutUsPage()
         </div>
       </div>
 
-      <h2>Prishtina</h2>
+      <h1 >Rekomandimet per qytetin e zgjedhur!</h1>
       <div className="secondBox">
         
-        <li>Newborn</li>
-        <li>Kafet e Vogla</li>
-        <li>Muzeu</li>
-        <li>Sheshi</li>
+        <li><img src="./images/prizren.jpg"></img> <h2>Prizren</h2><button>Shiko Rekomandimet</button></li>
+        <li><img src="./images/Radavc.jpg"></img> <h2>Radavc</h2><button>Shiko Rekomandimet</button></li>
+        <li><img src="./images/Prishtina.jpg"></img> <h2>Prishtine</h2><button>Shiko Rekomandimet</button></li>
+        <li><img src="./images/Brezovica.jpg"></img> <h2>Brezovice</h2><button>Shiko Rekomandimet</button></li>
+
+
       </div>
 
-      <h2>Prizreni</h2>
-      <div className="thirdBox">
-        <li>Shatervani</li>
-        <li>Kalaja</li>
-        <li>kafet</li>
-        <li>kafet</li>
-      </div>
 
     </main>
   );

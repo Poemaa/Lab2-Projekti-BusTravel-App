@@ -16,7 +16,7 @@ const Header = () => {
       <button style={{ cursor: 'pointer', border: 'none', backgroundColor: '#243b55', color: 'white', padding: '10px', fontSize:'17px', fontFamily:'Inter',textDecoration:'none'}}>Faqja Kryesore</button>
       </Link>
         <Link to="/aboutus" style={{textDecoration:'none'}}>
-          <button style={{ cursor: 'pointer', border: 'none', backgroundColor: '#243b55', color: 'white', padding: '10px', fontSize:'17px', fontFamily:'Inter',textDecoration:'none'}}>Rreth nesh</button>
+          <button style={{ cursor: 'pointer', border: 'none', backgroundColor: '#243b55', color: 'white', padding: '10px', fontSize:'17px', fontFamily:'Inter',textDecoration:'none'}}>Rekomandimet</button>
         </Link>
         <Link to="/login" style={{textDecoration:'none'}}>
           <button style={{ cursor: 'pointer', border: 'none', backgroundColor: '#243b55', color: 'white', padding: '10px', fontSize:'17px', fontFamily:'Inter',textDecoration:'none' }}>Kyçuni</button>
