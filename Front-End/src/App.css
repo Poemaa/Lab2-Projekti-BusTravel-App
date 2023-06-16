@@ -432,9 +432,14 @@ button:hover {
   flex-direction: row;
   justify-content: space-between;
   margin-top: 5%;
+  margin-bottom: 3%;
   margin-left: 15%;
   margin-right: 15%;
   text-align: left;
+}
+
+#kafet{
+  background-color: #ebe9f3;
 }
 
 #fotopr{
