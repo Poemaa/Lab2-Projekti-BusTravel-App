@@ -34,24 +34,22 @@ services:
       - pulsar
       - postgres
 
-  users:
-    image: ${DOCKER_REGISTRY-}users
-    container_name: users
+  busroutes:
+    image: ${DOCKER_REGISTRY-}busroutes
+    container_name: busroutes
     ports:
       - 5216:80
     build:
       context: .
-      dockerfile: User/Dockerfile
+      dockerfile: BusRoute/Dockerfile
     environment:
       ASPNETCORE_ENVIRONMENT: "Development"
     networks:
       - pulsar
-      - elastic
       - postgres
     depends_on:
       - pulsar
       - postgres
-      - elasticsearch
 
   ocelotgateway:
     image: ${DOCKER_REGISTRY-}ocelotgateway

@@ -29,7 +29,7 @@ function Rekomandimet()
 
         <li><img src="./images/prizren.jpg"></img> <h2>Prizren</h2> <Link to="/recommendationPrizren" style={{textDecoration:'none'}}> <button >Shiko Rekomandimet</button></Link></li>
         
-        <li><img src="./images/Radavc.jpg"></img> <h2>Radavc</h2> <Link to="/" style={{textDecoration:'none'}}><button>Shiko Rekomandimet</button></Link></li>
+        <li><img src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/23/71/b4/66/the-village-shopping.jpg?w=1200&h=1200&s=1"></img> <h2>Ferizaj</h2> <Link to="/recommendationFerizaj" style={{textDecoration:'none'}}><button>Shiko Rekomandimet</button></Link></li>
         
         <li><img src="./images/Prishtina.jpg"></img> <h2>Prishtine</h2> <Link to="/recommendationPrishtine" style={{textDecoration:'none'}}><button>Shiko Rekomandimet</button></Link></li>
          
