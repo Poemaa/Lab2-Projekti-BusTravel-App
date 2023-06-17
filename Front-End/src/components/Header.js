@@ -19,8 +19,8 @@ const Header = ({ userRole, username, onLogout }) => {
                 <Link to="/" style={{ textDecoration: 'none' }}>
                     <button style={{ cursor: 'pointer', border: 'none', backgroundColor: '#243b55', color: 'white', padding: '10px', fontSize: '17px', fontFamily: 'Inter', textDecoration: 'none' }}>Faqja Kryesore</button>
                 </Link>
-                <Link to="/aboutus" style={{ textDecoration: 'none' }}>
-                    <button style={{ cursor: 'pointer', border: 'none', backgroundColor: '#243b55', color: 'white', padding: '10px', fontSize: '17px', fontFamily: 'Inter', textDecoration: 'none' }}>Rreth nesh</button>
+                <Link to="/rekomandimet" style={{ textDecoration: 'none' }}>
+                    <button style={{ cursor: 'pointer', border: 'none', backgroundColor: '#243b55', color: 'white', padding: '10px', fontSize: '17px', fontFamily: 'Inter', textDecoration: 'none' }}>Rekomandimet</button>
                 </Link>
                 {userRole && (
                     <>
