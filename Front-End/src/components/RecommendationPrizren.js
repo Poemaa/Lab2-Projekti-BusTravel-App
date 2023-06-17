@@ -27,7 +27,7 @@ function RecommendationPrizren()
                     Sed ut perspiciatis unde omnis iste natus error <br></br>sit 
                     voluptatem accusantium doloremque laudantium, <br></br>totam 
                     rem aperiam,eaque ipsa quae ab illo <br></br>inventore veritatisv
-                    eritat et quasi et erita <br></br>totam 
+                    eritat et quasi et erita <br></br>totam
                     rem aperiam,eaque ipsa quae ab illo <br></br>
                     Sed ut perspiciatis unde omnis iste natus error </p>
                 <img id="fotoPr" src="./images/shadervan.jpg" width={"500"} height={"300"}></img>
@@ -35,12 +35,12 @@ function RecommendationPrizren()
 
             <div className="pr3">
                 <img id="fotoPr" src="./images/kalaja.jpg" width={"500"} height={"300"}></img>
-                <p> <br></br> <br></br> 
-                <h2>Kalaja e Prizrenit </h2> 
-                    Sed ut perspiciatis unde omnis iste natus error <br></br>sit 
-                    voluptatem accusantium doloremque laudantium, <br></br>totam 
+                <p> <br></br> <br></br>
+                    <h2>Kalaja e Prizrenit </h2>
+                    Sed ut perspiciatis unde omnis iste natus error <br></br>sit
+                    voluptatem accusantium doloremque laudantium, <br></br>totam
                     rem aperiam,eaque ipsa quae ab illo <br></br>inventore veritatisv
-                    eritat et quasi et erita <br></br>totam 
+                    eritat et quasi et erita <br></br>totam
                     rem aperiam,eaque ipsa quae ab illo <br></br>
                     Sed ut perspiciatis unde omnis iste natus error </p>
             </div>
