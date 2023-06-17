@@ -26,6 +26,7 @@ namespace BusRoute.services.Implementations
                 DepartureCityId = c.DepartureCityId,
                 ArrivalCityId = c.ArrivalCityId,
                 BusItineraries = c.BusItineraries,
+                Company = c.Company,
                 CompanyId = c.CompanyId,
                 NumberOfSeats = c.NumberOfSeats,
                 Price =c.Price
