@@ -3,7 +3,7 @@ import './App.css';
 import Header from './components/Header';
 import Footer from './components/Footer';
 import LoginPage from './components/LoginPage';
-import AboutUsPage from './components/AboutUsPage';
+import Rekomandimet from './components/Rekomandimet';
 import RegisterPage from "./components/RegisterPage";
 import Home from "./components/Home";
 import Location from "./components/Location";
@@ -25,7 +25,7 @@ function App()
         <Routes>
           <Route exact path="/" element={Home} />
           <Route path="/login" element={LoginPage} />
-          <Route path="/aboutus" element={AboutUsPage} />
+          <Route path="/rekomandimet" element={Rekomandimet} />
           <Route path="/register" element={RegisterPage} />
           <Route path="/location" element={Location}/>
           <Route exact path="/addLocation" element={AddLocation}/>
