@@ -2,7 +2,7 @@ import React , {useState} from 'react'
 import { Link } from 'react-router-dom'
 import { Route } from 'react-router-dom'
 
-export const AddLocation = () => {
+ const AddLocation = () => {
   const [formData, setFormData] = useState(null);
 
   const handleChange = (e => {
@@ -16,18 +16,15 @@ export const AddLocation = () => {
     e.preventDefault();
 
     const locationToAdd = {
-      LocationId : formData.LocationId,
-      LocationName: formData.LocationName
+     
+      locationId:formData.locationId,
+      locationName: formData.locationName
     };
 
-      const url = 'https://localhost:7013/api/Location';
+      const url = `https://localhost:7191/api/location/city?`;
       
       fetch(url, {
         method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-          'Authorization' : 'bearer ' + (localStorage.getItem("usertoken"))
-        },
         body: JSON.stringify(locationToAdd)
       })
       .then(response => response.json())
@@ -52,15 +49,14 @@ export const AddLocation = () => {
         <form className="w-100 px-5" action="">
           <h1 className="mt-5">Shto Lokacion te ri:</h1>
 
-          
           <div className="mt-5">
-            <label className="h3 form-label">ID Location</label>
-            <input name="idLocation" id="user_locationId" type="text" className="form-control" onChange={handleChange}/>
+            <label className="h3 form-label">Id</label>
+            <input name="locationId" id="location_id" type="int" className="form-control" onChange={handleChange}/>
           </div>
 
           <div className="mt-5">
             <label className="h3 form-label">Emri</label>
-            <input name="LocationName" id="location_name" type="text" className="form-control" onChange={handleChange}/>
+            <input name="locationName" id="location_name" type="text" className="form-control" onChange={handleChange}/>
           </div>
 
           <button onClick={handleSubmit} className="btn btn-dark btn-lg w-100 mt-5" id="user_locationsubmit">Shto</button>

@@ -4,12 +4,12 @@ import { Link } from 'react-router-dom'
 
 
 
-export const Location = () => {
+  const Location = () => {
 
   const [dbLocation, setdbLocation] = useState([]);
 
   function getLocations(){
-    const url = 'https://localhost:7013/api/Location'; 
+    const url = 'https://localhost:7191/api/location/cities'; 
     fetch(url, {
       method: 'GET',
      
@@ -24,8 +24,8 @@ export const Location = () => {
     });
   }
 
-  function deleteLocations(LocationId){
-    const url = `https://localhost:7013/api/Location/${LocationId}`; 
+  function deleteLocations(locationId){
+    const url = `https://localhost:7191/api/location/city/${locationId}`; 
     fetch(url, {
       method: 'DELETE',
       
@@ -46,28 +46,29 @@ export const Location = () => {
   useEffect(getLocations,[]);
 
   return (
-    <div className='table-responsive mt-1 mx-5' style={{paddingLeft: "13%"}}>
+    <div className='table-responsive mt-1 mx-5' style={{paddingLeft: "13%",marginBottom:'100px'}}>
       <h3>Lokacionet</h3>
     <table className='table table-striped'>
       <thead>
         <tr className="table"  style={{backgroundColor: "#A2BFC8"}}>
         <th scope='col'> Lokacioni ID</th>
           <th scope='col'>Emri</th> 
-          <th> </th>
           <th><Link to="/addLocation" onClick={() => {window.location.href="/addLocation"}} className="btn btn-secondary custom-btn">Shto Lokacion</Link> </th>
         </tr>
       </thead>
       <tbody>
           {dbLocation.map(dbLocation => (
-          <tr key={dbLocation.LocationId}>
-          <td>{dbLocation.LocationName}</td>
-          <td><Link to={`/editLocation/${dbLocation.LocationId}`} className="btn btn-outline-secondary" onClick={() => {window.location.href=`/editLocation/${dbLocation.LocationId}`}}>Edito</Link></td>
-          <td><button type="button" onClick={() => {if(window.confirm(`A jeni i sigurt qe doni te fshini Lokacionin? "${dbLocation.LocationId}"? `)) deleteLocations(dbLocation.LocationId)}} className="btn btn-secondary">Fshi</button></td>
+          <tr key={dbLocation.locationId}>
+          <td>{dbLocation.locationId}</td>
+          <td>{dbLocation.locationName}</td>
+          <td><Link to={`/editLocation/${dbLocation.locationId}`} className="btn btn-outline-secondary" onClick={() => {window.location.href=`/editLocation/${dbLocation.locationId}`}}>Edito</Link></td>
+          <td><button type="button" onClick={() => {if(window.confirm(`A jeni i sigurt qe doni te fshini Lokacionin? "${dbLocation.locationId}"? `)) deleteLocations(dbLocation.locationId)}} className="btn btn-secondary">Fshi</button></td>
         </tr>   
           ))}
       </tbody>
 
     </table>
+    <br></br>   <br></br>
     
   </div>
   )

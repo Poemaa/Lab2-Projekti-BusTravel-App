@@ -7,9 +7,9 @@ const SpinTheWheel = () =>
         'Prishtine!',
         'Prizren!',
         'Istog!',
-        'Mitrovice!',
+        'Radavc!',
         'Gjakove!',
-        'Ferizaj!',
+        'Brezovice!',
         'Peje!',
         'Gjilan!'
     ];

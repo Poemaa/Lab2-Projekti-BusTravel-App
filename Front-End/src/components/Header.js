@@ -12,16 +12,16 @@ const Header = () => {
         </Link>
       </div>
       <div style={{ display: 'flex', gap: '10px' }}>
-      <Link to="/" style={{textDecoration:'none'}}>
-      <button style={{ cursor: 'pointer', border: 'none', backgroundColor: '#243b55', color: 'white', padding: '10px', fontSize:'17px', fontFamily:'Inter',textDecoration:'none'}}>Faqja Kryesore</button>
+      <Link className='header-button' to="/" style={{textDecoration:'none'}}>
+      <button  style={{ cursor: 'pointer', border: 'none', backgroundColor: '#243b55', color: 'white', padding: '10px', fontSize:'17px', fontFamily:'Inter',textDecoration:'none'}}>Faqja Kryesore</button>
       </Link>
-        <Link to="/aboutus" style={{textDecoration:'none'}}>
-          <button style={{ cursor: 'pointer', border: 'none', backgroundColor: '#243b55', color: 'white', padding: '10px', fontSize:'17px', fontFamily:'Inter',textDecoration:'none'}}>Rekomandimet</button>
+        <Link className='header-button' to="/rekomandimet" style={{textDecoration:'none'}}>
+          <button  style={{ cursor: 'pointer', border: 'none', backgroundColor: '#243b55', color: 'white', padding: '10px', fontSize:'17px', fontFamily:'Inter',textDecoration:'none'}}>Rekomandimet</button>
         </Link>
-        <Link to="/login" style={{textDecoration:'none'}}>
+        <Link className='header-button'  to="/login" style={{textDecoration:'none'}}>
           <button style={{ cursor: 'pointer', border: 'none', backgroundColor: '#243b55', color: 'white', padding: '10px', fontSize:'17px', fontFamily:'Inter',textDecoration:'none' }}>Kyçuni</button>
         </Link>
-        <Link to="/register" style={{textDecoration:'none'}}>
+        <Link className='header-button' to="/register" style={{textDecoration:'none'}}>
           <button style={{ cursor: 'pointer', border: 'none', backgroundColor: '#243b55', color: 'white', padding: '10px', fontSize:'17px', fontFamily:'Inter',textDecoration:'none' }}>Regjistrohu</button>
         </Link>
       </div>
