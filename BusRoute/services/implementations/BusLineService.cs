@@ -39,7 +39,7 @@ namespace BusRoute.services.Implementations
             var busLine = await _unitOfWork.BusLineRepository
                                                          .GetById(a => a.Id == id)
                                                          .FirstOrDefaultAsync();
-            BusLineDTO dto = new BusLineDTO
+            BusLineDTO busline = new BusLineDTO
             {
                 Id= busLine.Id,
                 DepartureCityId = busLine.DepartureCityId,
@@ -49,7 +49,7 @@ namespace BusRoute.services.Implementations
                 NumberOfSeats = busLine.NumberOfSeats,
                 Price = busLine.Price
             };
-            return dto;
+            return busline;
         }
 
         public async Task<bool> AddBusLine(BusLineCreateDTO busLineDto)
@@ -65,7 +65,6 @@ namespace BusRoute.services.Implementations
             await _unitOfWork.BusLineRepository.CreateAsync(busLine);
             return await _unitOfWork.CompleteAsync();
         }
-
         public async Task<bool> DeleteBusLine(int busLineId)
         {
             var busLine = await _unitOfWork.BusLineRepository.GetById(a => a.Id == busLineId).FirstOrDefaultAsync();

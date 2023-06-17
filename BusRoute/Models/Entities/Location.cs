@@ -10,3 +10,5 @@ namespace BusRoute.Models.Entities
         public ICollection<BusLine> BusRoutesArrival { get; set; }
     }
 }
+
+
