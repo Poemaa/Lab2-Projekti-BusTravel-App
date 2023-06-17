@@ -80,6 +80,7 @@ function App() {
                     <Route path="/recommendationBrezovice" element={RecommendationBrezovice} />
                     <Route path="/recommendationGjilan" element={RecommendationGjilan} />
                     <Route path="/RecommendationPrishtine" element={RecommendationPrishtine} />
+                    <Route path="/RecommendationFerizaj" element={RecommendationFerizaj} />
                 </Routes>
                 <Footer />
             </Router>
