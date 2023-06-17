@@ -25,7 +25,7 @@ namespace BusRoute.services.Implementations
                 Id=c.Id,
                 DepartureCityId = c.DepartureCityId,
                 ArrivalCityId = c.ArrivalCityId,
-                ItineraryId = c.ItineraryId,
+                BusItineraries = c.BusItineraries,
                 CompanyId = c.CompanyId,
                 NumberOfSeats = c.NumberOfSeats,
                 Price =c.Price
@@ -38,17 +38,17 @@ namespace BusRoute.services.Implementations
             var busLine = await _unitOfWork.BusLineRepository
                                                          .GetById(a => a.Id == id)
                                                          .FirstOrDefaultAsync();
-            BusLineDTO dto = new BusLineDTO
+            BusLineDTO busline = new BusLineDTO
             {
                 Id= busLine.Id,
                 DepartureCityId = busLine.DepartureCityId,
                 ArrivalCityId = busLine.ArrivalCityId,
-                ItineraryId = busLine.ItineraryId,
+                BusItineraries = busLine.BusItineraries,
                 CompanyId = busLine.CompanyId,
                 NumberOfSeats = busLine.NumberOfSeats,
                 Price = busLine.Price
             };
-            return dto;
+            return busline;
         }
 
         public async Task<bool> AddBusLine(BusLineDTO busLineDto)
@@ -57,7 +57,7 @@ namespace BusRoute.services.Implementations
             {
                 DepartureCityId = busLineDto.DepartureCityId,
                 ArrivalCityId = busLineDto.ArrivalCityId,
-                ItineraryId = busLineDto.ItineraryId,
+                BusItineraries = busLineDto.BusItineraries,
                 CompanyId = busLineDto.CompanyId,
                 NumberOfSeats = busLineDto.NumberOfSeats,
                 Price = busLineDto.Price
@@ -65,7 +65,6 @@ namespace BusRoute.services.Implementations
             await _unitOfWork.BusLineRepository.CreateAsync(busLine);
             return await _unitOfWork.CompleteAsync();
         }
-
         public async Task<bool> DeleteBusLine(int busLineId)
         {
             var busLine = await _unitOfWork.BusLineRepository.GetById(a => a.Id == busLineId).FirstOrDefaultAsync();
@@ -80,7 +79,7 @@ namespace BusRoute.services.Implementations
                 Id = busLineDto.Id,
                 DepartureCityId = busLineDto.DepartureCityId,
                 ArrivalCityId = busLineDto.ArrivalCityId,
-                ItineraryId = busLineDto.ItineraryId,
+                BusItineraries = busLineDto.BusItineraries,
                 CompanyId = busLineDto.CompanyId,
                 NumberOfSeats = busLineDto.NumberOfSeats,
                 Price = busLineDto.Price

@@ -51,7 +51,7 @@ namespace BusRoute.services.Implementations
         {
             Company company = new Company
             {
-               CompanyId = companyToEdit.CompanyId,
+              
                 Name = companyToEdit.Name,
                 NumberOfBuses = companyToEdit.NumberOfBuses,
                 PhoneNumber = companyToEdit.PhoneNumber,
@@ -60,5 +60,7 @@ namespace BusRoute.services.Implementations
             _unitOfWork.CompanyRepository.Update(company);
             return await _unitOfWork.CompleteAsync();
         }
+
+      
     }
 }
