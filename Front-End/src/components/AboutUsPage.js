@@ -1,6 +1,6 @@
 import SpinTheWheel from "./SpinTheWheel";
 
-function AboutUsPage()
+const AboutUsPage = () =>
 {
 
   return (
@@ -72,4 +72,4 @@ function AboutUsPage()
 
 }
 
-export default <AboutUsPage />;
+export default AboutUsPage

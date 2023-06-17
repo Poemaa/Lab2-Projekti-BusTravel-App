@@ -52,8 +52,7 @@ namespace BusRoute.services.Implementations
                 
                 DepartureTime = busItineraryDto.DepartureTime,
                 ArrivalTime = busItineraryDto.ArrivalTime,
-                Duration = TimeSpan.Parse(busItineraryDto.ArrivalTime) - TimeSpan.Parse(busItineraryDto.DepartureTime),
-                DaysOfWeek = busItineraryDto.DaysOfWeek,
+                Duration = TimeSpan.Parse(busItineraryDto.ArrivalTime) - TimeSpan.Parse(busItineraryDto.DepartureTime)
 
 
             };

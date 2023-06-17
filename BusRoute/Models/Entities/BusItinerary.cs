@@ -8,11 +8,6 @@ namespace BusRoute.Models.Entities
 {
     public class BusItinerary
     {
-        public BusItinerary()
-        {
-            this.BusLines = new HashSet<BusLine>();
-            this.DaysOfWeek = new List<DitetEJaves>();
-        }
         public int BusItineraryId { get; set; }
   
         [RegularExpression(@"^([01]\d|2[0-3]):[0-5]\d$", ErrorMessage = "The DepartureTime must be in the 24-hour format (e.g., 16:30).")]
@@ -20,20 +15,7 @@ namespace BusRoute.Models.Entities
         [RegularExpression(@"^([01]\d|2[0-3]):[0-5]\d$", ErrorMessage = "The ArrivalTime must be in the 24-hour format (e.g., 16:30).")]
         public string ArrivalTime { get; set; }
         public TimeSpan Duration { get; set; }
-        public virtual ICollection<BusLine>? BusLines { get; set; }
-
-        [NotMapped]
-        public List<DitetEJaves> DaysOfWeek { get; set; }
+        public int BusLineId { get; set; }
+        public virtual BusLine BusLine { get; set; }
     }
-    public enum DitetEJaves
-    {
-        Hene,
-        Marte,
-        Merkure,
-        Enjte,
-        Premte,
-        Shtune,
-        Diele
-    }
-    
 }

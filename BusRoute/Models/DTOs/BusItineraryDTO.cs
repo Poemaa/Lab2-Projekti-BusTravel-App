@@ -14,7 +14,5 @@ namespace BusRoute.Models.DTOs
         public string ArrivalTime { get; set; }
         [JsonIgnore]
         public TimeSpan Duration { get; set; }
-        [NotMapped]
-        public List<DitetEJaves> DaysOfWeek { get; set; }
     }
 }

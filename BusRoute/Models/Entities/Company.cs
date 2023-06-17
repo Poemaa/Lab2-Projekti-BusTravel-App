@@ -7,6 +7,6 @@
         public int NumberOfBuses { get; set; }
         public string PhoneNumber { get; set; }
         public string Email { get; set; }
-        public ICollection<BusLine> BusLines { get; set; } = new List<BusLine>();
+        public virtual ICollection<BusLine> BusLines { get; set; }
     }
 }
