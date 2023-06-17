@@ -45,15 +45,15 @@ namespace BusRoute.services.Implementations
             return busItinerarydto;
         }
 
-        public async Task<bool> AddBusItinerary(BusItineraryDTO busItineraryDto)
+        public async Task<bool> AddBusItinerary(BusItineraryCreateDTO busItineraryDto)
         {
             BusItinerary busItinerary = new BusItinerary
             {
                 
                 DepartureTime = busItineraryDto.DepartureTime,
                 ArrivalTime = busItineraryDto.ArrivalTime,
+                BusLineId = busItineraryDto.BusLineId,
                 Duration = TimeSpan.Parse(busItineraryDto.ArrivalTime) - TimeSpan.Parse(busItineraryDto.DepartureTime)
-
 
             };
 

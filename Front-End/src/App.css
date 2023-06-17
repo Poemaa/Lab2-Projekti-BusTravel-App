@@ -375,6 +375,78 @@ button:hover {
   flex-direction: row;
 
 }
+
+
+.pr1 {
+  margin-top: 1.5%;
+  margin-left: 5%;
+  margin-right: 5%;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  background-color: #D9DEF0;
+  border-radius: 50px;
+  margin-bottom: 2%;
+}
+
+#fotoPr {
+  border-radius: 50px;
+}
+
+#eksploroni {
+  
+  padding-left: 8%;
+  padding-top: 30%;
+  color: #000942;
+  font-size: 35px;
+}
+
+#top {
+  background-color: #0a2745;
+  margin-left: 610px;
+  margin-right: 610px;
+  padding-top: 0.8%;
+  padding-bottom: 0.8%;
+  border-radius: 20px;
+  color: white;
+}
+
+#pr2 {
+  background-color: #D9DEF0;
+  border-radius: 50px;
+  padding-left: 5%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-top: 1%;
+  margin-left: 15%;
+  margin-right: 15%;
+  text-align: left;
+}
+
+#pr3 {
+  background-color: #D9DEF0;
+  border-radius: 50px;
+  padding-right: 5%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-top: 5%;
+  margin-bottom: 3%;
+  margin-left: 15%;
+  margin-right: 15%;
+  text-align: left;
+}
+
+#kafet{
+  background-color: #ebe9f3;
+}
+
+#fotopr{
+  background-color: #D9DEF0;
+  border-radius: 15%;
+}
+
 /* Wheel*/
 
 #color {
@@ -393,16 +465,18 @@ main {
 }
 
 .firstBox {
-  margin-top: 5%;
+  padding-top: 4%;
+  padding-bottom: 4%;
   display: flex;
   flex-direction: row;
   justify-content: space-evenly;
   text-align: center;
-  margin-bottom: 5%;
+  margin-bottom: 2%;
+  background-color: #D9DEF0;
 }
 
 .secondBox {
-  margin-top: 2%;
+  margin-top: 6%;
   display: flex;
   flex-direction: row;
   justify-content: space-evenly;
@@ -414,17 +488,26 @@ main {
   margin-top: 2%;
   display: flex;
   flex-direction: row;
-  justify-content: space-evenly;
+  justify-content: space-between;
   text-align: center;
+
 }
 
 li {
+  background-color: #D9DEF0;
+  border-radius: 15%;
   list-style: none;
-  border: solid #0a2745;
-  border-radius: 5%;
   padding: 5%;
-  padding-left: 7%;
-  padding-right: 7%;
+  padding-left: 4%;
+  padding-right: 4%;
+  text-decoration: none;
+}
+
+.secondBox img {
+  margin-top: -60%;
+  width: 200px;
+  height: 200px;
+  border-radius: 15%;
 }
 
 .wheel {
@@ -439,7 +522,7 @@ li {
   position: relative;
   background-color: #000942;
   color: rgb(255, 221, 0);
-  
+
 
 }
 
@@ -495,17 +578,17 @@ button:disabled {
   cursor: not-allowed;
 }
 
-.wheel{
- 
-    width: 310px;
-    height: 160px;
-    background: rgb(232, 194, 58);
-    position: relative;
-    -moz-border-radius: 10px;
-    -webkit-border-radius: 10px;
-    border-radius: 10px;
-    border-color: rgb(232, 194, 58);
-  
+.wheel {
+
+  width: 310px;
+  height: 160px;
+  background: rgb(232, 194, 58);
+  position: relative;
+  -moz-border-radius: 10px;
+  -webkit-border-radius: 10px;
+  border-radius: 10px;
+  border-color: rgb(232, 194, 58);
+
 }
 
 .wheel:before {
@@ -520,29 +603,31 @@ button:disabled {
   border-bottom: 19px solid transparent;
 }
 
+
+
 /* WelcomeBack Page*/
 
-.welcome-content{
+.welcome-content {
 
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   font-family: Inter;
-  
+
 }
 
-.welcome-one{
+.welcome-one {
   display: flex;
   flex-direction: row;
   justify-content: center;
   align-items: center;
   color: #2a4d97;
- 
+
 }
 
 
-.welcome-two{
+.welcome-two {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -551,25 +636,54 @@ button:disabled {
   color: #2a4d97;
   background-color: #EFEFEF;
   width: 100%;
-  
+
 }
-.mostVisited{
+
+.mostVisited {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
- 
+
 }
 
-.welcome-Buttons-one{
+.welcome-Buttons-one {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   text-decoration: none;
 }
 
-.welcome-Buttons-two{
+.welcome-Buttons-two {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   text-decoration: none;
+}
+
+
+
+/* Feedback-Page */
+.feedback-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 100px auto 0;
+  max-width: 600px;
+  width: 100%;
+}
+
+.feedback-container h1 {
+  font-size: 2.5rem;
+  margin-bottom: 11px;
+  color: #323232;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 20px;
+  width: 100%;
 }

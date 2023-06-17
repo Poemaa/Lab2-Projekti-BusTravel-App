@@ -9,6 +9,8 @@ import Home from "./components/Home";
 import Location from "./components/Location";
 import AddLocation from "./components/AddLocation";
 import WelcomeBack from './components/WelcomeBack';
+import FeedbackPage from './components/FeedbackPage';
+import RecommendationPrizren from './components/RecommendationPrizren';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 
 function App() {

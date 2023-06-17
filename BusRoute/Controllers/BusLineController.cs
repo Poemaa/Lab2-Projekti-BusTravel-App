@@ -36,14 +36,14 @@ namespace BusRoute.Controllers
         }
 
         [HttpPost("busLine")]
-        public async Task<IActionResult> AddBusLine(BusLineDTO busLineDto)
+        public async Task<IActionResult> AddBusLine(BusLineCreateDTO busLineDto)
         {
             var created = await _busLineService.AddBusLine(busLineDto);
             return created != null ? Ok("BusLine created") : BadRequest();
         }
 
         [HttpPut("busLine")]
-        public async Task<IActionResult> EditBusLine([FromForm] BusLineDTO busLineDto)
+        public async Task<IActionResult> EditBusLine([FromForm] BusLineEditDTO busLineDto)
         {
             var edited = await _busLineService.EditBusLine(busLineDto);
             return edited != null ? Ok("BusLine edited successfully") : BadRequest();

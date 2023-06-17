@@ -26,6 +26,7 @@ namespace BusRoute.services.Implementations
                 DepartureCityId = c.DepartureCityId,
                 ArrivalCityId = c.ArrivalCityId,
                 BusItineraries = c.BusItineraries,
+                Company = c.Company,
                 CompanyId = c.CompanyId,
                 NumberOfSeats = c.NumberOfSeats,
                 Price =c.Price
@@ -51,13 +52,12 @@ namespace BusRoute.services.Implementations
             return dto;
         }
 
-        public async Task<bool> AddBusLine(BusLineDTO busLineDto)
+        public async Task<bool> AddBusLine(BusLineCreateDTO busLineDto)
         {
             BusLine busLine = new BusLine
             {
                 DepartureCityId = busLineDto.DepartureCityId,
                 ArrivalCityId = busLineDto.ArrivalCityId,
-                BusItineraries = busLineDto.BusItineraries,
                 CompanyId = busLineDto.CompanyId,
                 NumberOfSeats = busLineDto.NumberOfSeats,
                 Price = busLineDto.Price
@@ -73,14 +73,13 @@ namespace BusRoute.services.Implementations
             return await _unitOfWork.CompleteAsync();
         }
 
-        public async Task<bool> EditBusLine(BusLineDTO busLineDto)
+        public async Task<bool> EditBusLine(BusLineEditDTO busLineDto)
         {
             BusLine busLine = new BusLine
             {
                 Id = busLineDto.Id,
                 DepartureCityId = busLineDto.DepartureCityId,
                 ArrivalCityId = busLineDto.ArrivalCityId,
-                BusItineraries = busLineDto.BusItineraries,
                 CompanyId = busLineDto.CompanyId,
                 NumberOfSeats = busLineDto.NumberOfSeats,
                 Price = busLineDto.Price
