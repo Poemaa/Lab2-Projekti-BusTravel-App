@@ -16,6 +16,7 @@ import RecommendationPeja from './components/RecommendationPeja';
 import RecommendationBrezovice from './components/RecommendationBrezovice';
 import RecommendationGjilan from './components/RecommendationGjilan';
 import RecommendationPrishtine from './components/RecommendationPrishtine';
+import RecommendationFerizaj from './components/RecommendationFerizaj';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 
 
@@ -40,6 +41,7 @@ function App()
           <Route path="/recommendationBrezovice" element={RecommendationBrezovice} />
           <Route path="/recommendationGjilan" element={RecommendationGjilan} />
           <Route path="/RecommendationPrishtine" element={RecommendationPrishtine} />
+          <Route path="/RecommendationFerizaj" element={RecommendationFerizaj} />
        
         </Routes>
         <Footer />
