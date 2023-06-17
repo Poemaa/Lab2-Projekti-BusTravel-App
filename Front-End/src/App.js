@@ -11,6 +11,8 @@ import AddLocation from "./components/AddLocation";
 import WelcomeBack from './components/WelcomeBack';
 import FeedbackPage from './components/FeedbackPage';
 import RecommendationPrizren from './components/RecommendationPrizren';
+import RecommendationIstog from './components/RecommendationIstog';
+import RecommendationPeja from './components/RecommendationPeja';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 
 
@@ -30,6 +32,8 @@ function App()
           <Route path="/welcomeback" element={WelcomeBack} />
           <Route path="/feedbackpage" element={FeedbackPage} />
           <Route path="/recommendationPrizren" element={RecommendationPrizren} />
+          <Route path="/recommendationIstog" element={RecommendationIstog} />
+          <Route path="/recommendationPeja" element={RecommendationPeja} />
         </Routes>
         <Footer />
       </Router>
