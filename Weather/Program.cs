@@ -1,9 +1,10 @@
-using Weather.Services.Implementations;
 using Weather.Services.Interfaces;
+using System.Net.Http;
 
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
+builder.Services.AddHttpClient();
 builder.Services.AddScoped<IWeatherService, WeatherService>();
 
 builder.Services.AddControllers();
