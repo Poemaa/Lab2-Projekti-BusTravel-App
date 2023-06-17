@@ -2,6 +2,6 @@
 {
     public interface IWeatherService
     {
-        Task<Weather.Models.Entities.Weather> GetByWeatherByCityIdAsync(int cityId);
+        Task<Weather.Models.Entities.Weather> GetWeatherByCoordinates(double latitude, double longitude);
     }
 }

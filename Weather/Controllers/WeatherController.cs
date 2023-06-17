@@ -14,10 +14,10 @@ namespace Weather.Controllers
             _weatherService = weatherService;
         }
 
-        [HttpGet("{cityid:int}")]
-        public async Task<IActionResult> GetWeatherByCityIdAsync(int cityid)
+        [HttpGet]
+        public async Task<IActionResult> GetWeatherByCoordinates(double latitude, double longitude)
         {
-            var weather = await _weatherService.GetByWeatherByCityIdAsync(cityid);
+            var weather = await _weatherService.GetWeatherByCoordinates(latitude, longitude);
             return weather != null ? Ok(weather) : NotFound();
         }
     }

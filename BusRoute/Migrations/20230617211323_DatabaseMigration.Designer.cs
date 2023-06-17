@@ -12,8 +12,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace BusRoute.Migrations
 {
     [DbContext(typeof(BusRouteDbContext))]
-    [Migration("20230617101610_AddedRelationships")]
-    partial class AddedRelationships
+    [Migration("20230617211323_DatabaseMigration")]
+    partial class DatabaseMigration
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -124,9 +124,15 @@ namespace BusRoute.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("LocationId"));
 
+                    b.Property<double>("Latitude")
+                        .HasColumnType("float");
+
                     b.Property<string>("LocationName")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
+
+                    b.Property<double>("Longitude")
+                        .HasColumnType("float");
 
                     b.HasKey("LocationId");
 
