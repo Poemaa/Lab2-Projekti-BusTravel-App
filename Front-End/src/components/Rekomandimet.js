@@ -31,7 +31,7 @@ function Rekomandimet()
         
         <li><img src="./images/Radavc.jpg"></img> <h2>Radavc</h2> <Link to="/" style={{textDecoration:'none'}}><button>Shiko Rekomandimet</button></Link></li>
         
-        <li><img src="./images/Prishtina.jpg"></img> <h2>Prishtine</h2> <Link to="/" style={{textDecoration:'none'}}><button>Shiko Rekomandimet</button></Link></li>
+        <li><img src="./images/Prishtina.jpg"></img> <h2>Prishtine</h2> <Link to="/recommendationPrishtine" style={{textDecoration:'none'}}><button>Shiko Rekomandimet</button></Link></li>
          
         <li><img src="./images/Brezovica.jpg"></img> <h2>Brezovice</h2><Link to="/recommendationBrezovice" style={{textDecoration:'none'}}> <button>Shiko Rekomandimet</button></Link></li>
 
