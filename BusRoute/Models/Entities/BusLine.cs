@@ -19,5 +19,5 @@ namespace BusRoute.Models.Entities
         public double Price { get; set; }
         public virtual ICollection<BusItinerary> BusItineraries { get; set; }
     }
-
+    
 }

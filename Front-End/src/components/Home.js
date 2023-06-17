@@ -3,7 +3,7 @@ import {HiOutlineTicket} from "react-icons/hi"
 import {FaBus} from "react-icons/fa"
 import {TiWeatherPartlySunny} from "react-icons/ti"
 
-function Home() {
+const Home = () => {
   return (
       <div className="home-content">
         <div className="home-one">
@@ -135,4 +135,4 @@ function Home() {
   );
 }
 
-export default <Home/>;
+export default Home;

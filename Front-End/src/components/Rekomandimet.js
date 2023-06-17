@@ -42,7 +42,7 @@ function Rekomandimet()
 
 <li><img src="./images/gjakove.jpg"></img> <h2>Gjakove</h2> <Link to="/" style={{textDecoration:'none'}}><button>Shiko Rekomandimet</button></Link></li>
 
-<li><img src="./images/istog.jpg"></img> <h2>Istog</h2><Link to="/recommendationIstog" style={{textDecoration:'none'}}><button>Shiko Rekomandimet</button></Link></li>
+<li><img src="./images/istog4.jpg"></img> <h2>Istog</h2><Link to="/recommendationIstog" style={{textDecoration:'none'}}><button>Shiko Rekomandimet</button></Link></li>
  
 <li><img src="./images/gjilan.png"></img> <h2>Gjilan</h2><Link to="/recommendationGjilan" style={{textDecoration:'none'}}><button>Shiko Rekomandimet</button></Link></li>
 

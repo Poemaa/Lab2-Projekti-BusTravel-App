@@ -1,4 +1,5 @@
-﻿using User.Models.Entities;
+﻿using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
+using User.Models.Entities;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.CodeAnalysis;
 using static Microsoft.EntityFrameworkCore.DbLoggerCategory.Database;
@@ -11,7 +12,7 @@ namespace User.Data
         {
         }
 
-
+        public DbSet<Models.Entities.User> Users { get; set; }
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
 
