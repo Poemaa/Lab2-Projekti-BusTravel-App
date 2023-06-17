@@ -13,6 +13,9 @@ import FeedbackPage from './components/FeedbackPage';
 import RecommendationPrizren from './components/RecommendationPrizren';
 import RecommendationIstog from './components/RecommendationIstog';
 import RecommendationPeja from './components/RecommendationPeja';
+import RecommendationBrezovice from './components/RecommendationBrezovice';
+import RecommendationGjilan from './components/RecommendationGjilan';
+import RecommendationPrishtine from './components/RecommendationPrishtine';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 
 
@@ -34,6 +37,10 @@ function App()
           <Route path="/recommendationPrizren" element={RecommendationPrizren} />
           <Route path="/recommendationIstog" element={RecommendationIstog} />
           <Route path="/recommendationPeja" element={RecommendationPeja} />
+          <Route path="/recommendationBrezovice" element={RecommendationBrezovice} />
+          <Route path="/recommendationGjilan" element={RecommendationGjilan} />
+          <Route path="/RecommendationPrishtine" element={RecommendationPrishtine} />
+       
         </Routes>
         <Footer />
       </Router>
