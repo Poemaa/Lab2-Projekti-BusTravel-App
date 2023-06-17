@@ -8,8 +8,8 @@ namespace BusRoute.Services.Interfaces
     {
         Task<List<BusLineDTO>> GetAllBusLines();
         Task<BusLineDTO> GetByIdAsync(int id);
-        Task<bool> AddBusLine(BusLineDTO busLineDto);
+        Task<bool> AddBusLine(BusLineCreateDTO busLineDto);
         Task<bool> DeleteBusLine(int busLineId);
-        Task<bool> EditBusLine(BusLineDTO busLineDto);
+        Task<bool> EditBusLine(BusLineEditDTO busLineDto);
     }
 }
