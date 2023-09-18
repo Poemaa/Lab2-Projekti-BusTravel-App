@@ -8,7 +8,7 @@ namespace BusRoute.Services.Interfaces
     {
         Task<List<LocationDTO>> GetAllCities();
         Task<LocationDTO> GetByIdAsync(int id);
-        Task<bool> AddCity(string cityName);
+        Task<bool> AddCity(LocationDTO newlocation);
         Task<bool> DeleteCity(int cityId);
         Task<bool> EditCity(LocationDTO location);
     }

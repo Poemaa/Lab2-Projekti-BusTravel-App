@@ -1,9 +1,11 @@
-﻿using BusReservation.Models.Entities;
+﻿using BusReservation.Models.DTOs;
+using BusReservation.Models.Entities;
 
-namespace BusReservation.Services.Interfaces
+public interface IReservationService
 {
-    public interface IReservationService
-    {
-        Task<Reservation> GetByIdAsync(int id);
-    }
+    Task<List<Reservation>> GetAll();
+    Task<Reservation> GetByIdAsync(int id);
+    Task<List<Reservation>> GetByEmailAsync(string email);
+    Task<bool> MakeReservationAsync(ReservationDTO reservationToMake);
+    Task<bool> DeleteReservation(int reservationId);
 }

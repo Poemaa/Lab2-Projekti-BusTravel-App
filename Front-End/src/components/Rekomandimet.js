@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import SpinTheWheel from "./SpinTheWheel";
-;
+
 
 function Rekomandimet()
 {
@@ -21,8 +21,9 @@ function Rekomandimet()
         </div>
       </div>
 
-<br></br><br></br><br></br><br></br><br></br>
-     <h1 style={{ fontFamily: 'Inter', color:'#1c3d6e' }}>Rekomandimet per qytetin e zgjedhur!</h1>
+
+<div className="recFoto" >
+     <h1 style={{ fontFamily: 'Inter', color:'white' }}>Rekomandimet per qytetin e zgjedhur!</h1>
       <br></br>
 
       <div id="rec" className="secondBox">
@@ -45,7 +46,7 @@ function Rekomandimet()
 <li><img src="./images/istog4.jpg"></img> <h2>Istog</h2><Link to="/recommendationIstog" style={{textDecoration:'none'}}><button>Shiko Rekomandimet</button></Link></li>
  
 <li><img src="./images/gjilan.png"></img> <h2>Gjilan</h2><Link to="/recommendationGjilan" style={{textDecoration:'none'}}><button>Shiko Rekomandimet</button></Link></li>
-
+</div>
 <br></br>
 <br></br>
 <br></br>

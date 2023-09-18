@@ -47,11 +47,12 @@ namespace BusRoute.services.Implementations
             return await _unitOfWork.CompleteAsync();
         }
 
-        public async Task<bool> EditCompany(Company companyToEdit)
+        public async Task<bool> EditCompany(CompanyEditDTO companyToEdit)
         {
             Company company = new Company
             {
               
+                CompanyId = companyToEdit.CompanyId,
                 Name = companyToEdit.Name,
                 NumberOfBuses = companyToEdit.NumberOfBuses,
                 PhoneNumber = companyToEdit.PhoneNumber,

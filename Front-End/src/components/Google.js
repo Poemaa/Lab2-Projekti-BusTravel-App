@@ -18,7 +18,20 @@ const Google = ({ onLogin }) => {
                         'Content-Type': 'application/json',
                     },
                 });
-
+                const responseToken = await fetch('https://localhost:5000/api/user/getToken', {
+                    method: 'GET',
+                    headers: {
+                        'Authorization': `Bearer ${credentialResponse.credential}`,
+                        'Content-Type': 'application/json',
+                    },
+                }).then(response => response.text())
+                    .then(data => {
+                        
+                        localStorage.setItem('jwt', data);
+                    })
+                    .catch(error => {
+                        console.log(error);
+                    });
                 if (response.ok) {
                     const data = await response.json();
                     const { firstName, lastName, role } = data;
@@ -60,7 +73,7 @@ const Google = ({ onLogin }) => {
 
                     onLogin({ userName, role });
                     console.log(userName);
-                    navigate(`/`);
+                    navigate(`/welcomeback`);
                 } else {
                     console.log('Failed to fetch user data');
                 }

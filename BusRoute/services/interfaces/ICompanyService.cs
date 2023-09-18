@@ -10,6 +10,6 @@ namespace BusRoute.Services.Interfaces
         Task<Company> GetByIdAsync(int id);
         Task<bool> AddCompany(CompanyDTO companyDto);
         Task<bool> DeleteCompany(int companyId);
-        Task<bool> EditCompany(Company companyToEdit);
+        Task<bool> EditCompany(CompanyEditDTO companyToEdit);
     }
 }

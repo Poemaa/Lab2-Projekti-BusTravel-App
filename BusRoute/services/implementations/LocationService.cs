@@ -21,7 +21,9 @@ namespace BusRoute.services.implementations
             return await _unitOfWork.LocationRepository.GetAll().Select(l => new LocationDTO
             {
                 LocationId = l.LocationId,
-                LocationName = l.LocationName
+                LocationName = l.LocationName,
+                Latitude= l.Latitude,
+                Longitude= l.Longitude
             }).ToListAsync();
         }
         public async Task<LocationDTO> GetByIdAsync(int id)
@@ -34,15 +36,20 @@ namespace BusRoute.services.implementations
             {
                 LocationId = location.LocationId,
                 LocationName = location.LocationName,
+                Latitude = location.Latitude,
+                Longitude = location.Longitude
             };
             return dto;
         }
 
-        public async Task<bool> AddCity(string cityName)
+        public async Task<bool> AddCity(LocationDTO newlocation)
         {
             Location city = new Location
             {
-                LocationName = cityName
+                LocationName = newlocation.LocationName,
+                Longitude = newlocation.Longitude,
+                Latitude = newlocation.Latitude
+
             };
             await _unitOfWork.LocationRepository.CreateAsync(city);
             return await _unitOfWork.CompleteAsync();
@@ -60,7 +67,9 @@ namespace BusRoute.services.implementations
             Location location = new Location
             {
                 LocationId = locationDto.LocationId,
-                LocationName = locationDto.LocationName
+                LocationName = locationDto.LocationName,
+                Latitude = locationDto.Latitude,
+                Longitude = locationDto.Longitude
             };
             _unitOfWork.LocationRepository.Update(location);
             return await _unitOfWork.CompleteAsync();

@@ -1,6 +1,6 @@
 ﻿using BusFeedback.Data.Repository.Models;
 using BusFeedback.Data.Repository.Models.Interfaces;
-using BusFeedback.Services.Interfaces;
+using BusFeedback.services.interfaces;
 using System.Collections;
 
 namespace BusFeedback.Data.UnitOfWork

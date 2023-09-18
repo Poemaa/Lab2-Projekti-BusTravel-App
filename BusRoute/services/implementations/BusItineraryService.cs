@@ -25,7 +25,8 @@ namespace BusRoute.services.Implementations
                 BusItineraryId = c.BusItineraryId,
                 DepartureTime = c.DepartureTime,
                 ArrivalTime = c.ArrivalTime,
-                Duration = c.Duration
+                Duration = c.Duration,
+                BusLineId= c.BusLineId
 
             }).ToListAsync();
         }
@@ -68,14 +69,16 @@ namespace BusRoute.services.Implementations
             return await _unitOfWork.CompleteAsync();
         }
 
-        public async Task<bool> EditBusItinerary(BusItineraryDTO busItineraryToEdit)
+        public async Task<bool> EditBusItinerary(BusItineraryToEditDTO itineraryToEdit)
         {
             BusItinerary busItinerary = new BusItinerary
             {
-                BusItineraryId = busItineraryToEdit.BusItineraryId,
-                DepartureTime = busItineraryToEdit.DepartureTime,
-                ArrivalTime = busItineraryToEdit.ArrivalTime,
-                Duration = TimeSpan.Parse(busItineraryToEdit.ArrivalTime) - TimeSpan.Parse(busItineraryToEdit.DepartureTime)
+                BusItineraryId = itineraryToEdit.BusItineraryId,
+                DepartureTime = itineraryToEdit.DepartureTime,
+                ArrivalTime = itineraryToEdit.ArrivalTime,
+                BusLineId=itineraryToEdit.BusLineId,
+                Duration = TimeSpan.Parse(itineraryToEdit.ArrivalTime) - TimeSpan.Parse(itineraryToEdit.DepartureTime)
+
             };
 
 

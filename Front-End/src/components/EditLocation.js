@@ -1,17 +1,19 @@
 import React, {useState, useEffect} from 'react'
 import { Link } from 'react-router-dom'
+import { useParams } from 'react-router-dom';
 
 
 
   const EditLocation = (props) => {
 
   const [formData, setFormData] = useState([]);
-  const locationId = (props.match.params.id);
+  const {locationId}= useParams();
+  
 
   console.log(props);
 
   function getLocationById(){
-    const url = `https://localhost:7191/api/location/city/${locationId}`;
+    const url = `https://localhost:7191/api/location/city/${locationId}`; 
     fetch(url, {
       method: 'GET',
      
@@ -39,15 +41,18 @@ import { Link } from 'react-router-dom'
     e.preventDefault();
 
     const LocationToEdit = {
-    
-      locationName: formData.locationName
+  
+      locationName: formData.locationName,
+      
     };
 
-    const url = 'https://localhost:7191/api/location/city';
+    const url = `https://localhost:7191/api/location/city`;
 
     fetch(url, {
       method: 'PUT',
-    
+      headers: {
+        'Content-Type': 'application/json',
+      },
       body: JSON.stringify(LocationToEdit)
     })
     .then(response => response.json())
@@ -68,11 +73,6 @@ import { Link } from 'react-router-dom'
     <div style={{marginRight: "33%", paddingLeft: "18%"}}>
       <form className="w-100 px-5" action="">
         <h1 className="mt-5">Edito Lokacionin</h1>
-
-        <div className="mt-5">
-          <label className="h3 form-label">Location Id</label>
-          <input value={locationId} name="LocationId" type="number" className="form-control" onChange={handleChange} />
-        </div>
 
         <div className="mt-4">
           <label className="h3 form-label">Emri</label>

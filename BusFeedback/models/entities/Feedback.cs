@@ -1,16 +1,16 @@
-﻿namespace BusFeedback.Models.Entities
+﻿using MongoDB.Bson;
+using MongoDB.Bson.Serialization.Attributes;
+namespace BusFeedback.Models.Entities;
+
+
+
+public class Feedback
 {
-    public class Feedback
-    {
+    [BsonId]
+    [BsonRepresentation(BsonType.ObjectId)]
+    public string Id { get; set; }
+    public string Text { get; set; }
+    public string CompanyName { get; set; }
+    public DateTime Date { get; set; } = DateTime.Now;
 
-        public int FeedbackId { get; set; }
-        public String Text { get; set; }
-
-        //public User User { get; set; }
-        public int UserId { get; set; }
-
-        //public Company Company { get; set; }
-        public int CompanyId { get; set; }
-        public DateTime Date { get; set; }
-    }
 }

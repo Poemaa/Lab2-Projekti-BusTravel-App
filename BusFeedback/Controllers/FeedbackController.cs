@@ -1,10 +1,12 @@
 ﻿using BusFeedback.Models.DTOs;
 using BusFeedback.Models.Entities;
-using BusFeedback.Services.Interfaces;
+using BusFeedback.services.interfaces;  
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using System.Data;
+using System.Security.Claims;
+using BusFeedback.services.implementations;
 
 namespace BusFeedback.Controllers
 {
@@ -20,39 +22,53 @@ namespace BusFeedback.Controllers
             _feedbackService = feedbackService;
         }
 
-        [HttpGet("feedback")]
-        public async Task<IActionResult> GetAllFeedbacks()
+        [HttpGet]
+        public IActionResult GetAllFeedbacks()
         {
-            var feedback = await _feedbackService.GetAllFeedbacks();
+            var feedbacks = _feedbackService.GetAllFeedbacks();
+            return feedbacks.Count > 0 ? Ok(feedbacks) : NotFound();
+        }
+
+        [HttpGet("/feedbackId")]
+        public IActionResult GetFeedbackByIdAsync(string Id)
+        {
+            var feedback = _feedbackService.GetAllFeedbacks(Id);
             return feedback != null ? Ok(feedback) : NotFound();
         }
 
-        [HttpGet("feedback/{id:int}")]
-        public async Task<IActionResult> GetFeedbackByIdAsync(int feedbackId)
-        {
-            var feedback = await _feedbackService.GetByIdAsync(feedbackId);
-            return feedback != null ? Ok(feedback) : NotFound();
-        }
-
-        [HttpPost("feedback")]
+       // [Authorize]
+        [HttpPost]
         public async Task<IActionResult> AddFeedback(FeedbackDTO feedbackDto)
         {
-            var created = await _feedbackService.AddFeedback(feedbackDto);
+
+            Feedback feedback = new Feedback()
+            {
+                CompanyName = feedbackDto.CompanyName,
+                Text = feedbackDto.Text,
+                Date = DateTime.Now,
+               
+            };
+
+            var created = _feedbackService.CreateFeedback(feedback);
             return created != null ? Ok("Feedback created") : BadRequest();
         }
 
-        [HttpPut("feedback")]
-        public async Task<IActionResult> EditFeedback([FromForm] FeedbackDTO feedbackDto)
+        //[Authorize]
+        [HttpPut]
+        public async Task<IActionResult> UpdateFeedback([FromForm] FeedbackEditDTO feedbackDto)
         {
-            var edited = await _feedbackService.EditFeedback(feedbackDto);
-            return edited != null ? Ok("Feedback edited successfully") : BadRequest();
+            var feedBack = _feedbackService.GetAllFeedbacks(feedbackDto.Id);
+            feedBack.Text = feedbackDto.Text;
+            _feedbackService.UpdateFeedback(feedbackDto.Id, feedBack);
+            return Ok("Feedback updated");
         }
 
-        [HttpDelete("feedback/{feedbackId:int}")]
-        public async Task<IActionResult> DeleteFeedbackById(int feedbackId)
+       // [Authorize]
+        [HttpDelete("/feedbackId")]
+        public async Task<IActionResult> DeleteFeedbackById(string Id)
         {
-            var deleted = await _feedbackService.DeleteFeedback(feedbackId);
-            return deleted != null ? Ok("Feedback deleted") : BadRequest();
+            _feedbackService.DeleteFeedback(Id);
+            return Ok("Feedback deleted");
         }
 
     }

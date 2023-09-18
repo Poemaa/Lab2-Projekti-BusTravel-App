@@ -38,7 +38,7 @@ namespace BusRoute.Controllers
         }
 
         [HttpPut("company")]
-        public async Task<IActionResult> EditCompany([FromForm] Company companyToEdit)
+        public async Task<IActionResult> EditCompany([FromForm] CompanyEditDTO companyToEdit)
         {
             var edited = await _companyService.EditCompany(companyToEdit);
             return edited != null ? Ok("Company edited successfully") : BadRequest();

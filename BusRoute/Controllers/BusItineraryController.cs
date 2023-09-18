@@ -43,9 +43,9 @@ namespace BusRoute.Controllers
         }
 
         [HttpPut("busItinerary")]
-        public async Task<IActionResult> EditBusItinerary([FromForm] BusItineraryDTO busItineraryDto)
+        public async Task<IActionResult> EditBusItinerary([FromForm] BusItineraryToEditDTO itineraryToEdit)
         {
-            var edited = await _busItineraryService.EditBusItinerary(busItineraryDto);
+            var edited = await _busItineraryService.EditBusItinerary(itineraryToEdit);
             return edited != null ? Ok("BusItinerary edited successfully") : BadRequest();
         }
 

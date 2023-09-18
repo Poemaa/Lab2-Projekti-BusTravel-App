@@ -30,9 +30,9 @@ namespace BusRoute.Controllers
             }
 
             [HttpPost("city")]
-            public async Task<IActionResult> AddCity(string cityName)
+            public async Task<IActionResult> AddCity(LocationDTO newlocation)
             {
-                var created = await _locationService.AddCity(cityName);
+                var created = await _locationService.AddCity(newlocation);
                 return created != null ? Ok("City created") : BadRequest();
             }
 

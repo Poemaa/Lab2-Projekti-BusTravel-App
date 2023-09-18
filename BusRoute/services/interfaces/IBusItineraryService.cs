@@ -11,6 +11,6 @@ namespace BusRoute.Services.Interfaces
         Task<BusItineraryDTO?> GetByIdAsync(int id);
         Task<bool> AddBusItinerary(BusItineraryCreateDTO busItineraryDto);
         Task<bool> DeleteBusItinerary(int busItineraryId);
-        Task<bool> EditBusItinerary(BusItineraryDTO busItineraryDto);
+        Task<bool> EditBusItinerary(BusItineraryToEditDTO itineraryToEdit);
     }
 }

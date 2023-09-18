@@ -1,24 +1,32 @@
 import React from "react";
+import {checkAdmin, checkUser} from "../Services/checkRolet";
 
 
-function WelcomeBack() {
+const WelcomeBack = () => {
+
+    const username = (localStorage.getItem("username"));
+
+
   return (
     <div className="welcome-content">
         <div className="welcome-one">
 <div classname="welcome-text">
-<h2 style={{fontSize:'26px'}}>Mir&euml; se vini n&euml; KosovaTour!</h2>
+<h2 style={{fontSize:'26px'}}>Mir&euml; se vini n&euml; KosovaTour {username}!</h2>
 <br>
 </br>
 <p style={{fontSize:'20px'}}>Shijoni udh&euml;timin tuaj me nj&euml;
     <br></br> eksperienc&euml; t&euml; paharrueshme</p><br></br>
    <div className="welcome-Buttons-one">
     <a href='' style={{textDecoration:'none'}}><button id="welcome-button" style={{fontFamily:'Inter',width:'220px', height:'50px', marginBottom:'30px'}}>Shiko Linjat</button></a>
-    <a href='' style={{textDecoration:'none'}}><button id="welcome-button" style={{fontFamily:'Inter',width:'220px', height:'50px', marginBottom:'30px', marginLeft:'40px'}}>Profili im</button></a>
+    <a href='' style={{textDecoration:'none'}}><button id="welcome-button" style={{fontFamily:'Inter',width:'220px', height:'50px', marginBottom:'30px', marginLeft:'40px'}}>Rezervo</button></a>
     </div>
     <div className="welcome-Buttons-two">
-    <a href='' style={{textDecoration:'none'}}><button style={{fontFamily:'Inter',width:'220px', height:'50px'}}>Shiko Rekomandimet</button></a>
+    <a href='/rekomandimet' style={{textDecoration:'none'}}><button style={{fontFamily:'Inter',width:'220px', height:'50px'}}>Shiko Rekomandimet</button></a>
     <a href="/feedbackpage" style={{textDecoration:'none'}}><button id="welcome-button" style={{fontFamily:'Inter',width:'220px', height:'50px', marginBottom:'30px', marginLeft:'40px'}}>Sh&euml;no Feedback</button></a>
     </div>
+                        
+                        
+
 </div>
 <div classname="welcome-picture">
 <img src="./images/w1.svg" alt="foto" width={"510"} height={"480"} style={{marginLeft:'230px'}} />
@@ -53,10 +61,6 @@ function WelcomeBack() {
 </div>
 <br></br><br></br><br></br><br></br><br></br><br></br>
 </div>
-
-
-
-
 
 </div>
 

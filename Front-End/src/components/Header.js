@@ -5,6 +5,7 @@ import { Link } from 'react-router-dom';
 const Header = ({ userRole, username, onLogout }) => {
     const handleLogout = () => {
         onLogout();
+        {window.location.href="/"}
     };
 
     return (
@@ -22,10 +23,19 @@ const Header = ({ userRole, username, onLogout }) => {
                 <Link to="/rekomandimet" style={{ textDecoration: 'none' }}>
                     <button style={{ cursor: 'pointer', border: 'none', backgroundColor: '#243b55', color: 'white', padding: '10px', fontSize: '17px', fontFamily: 'Inter', textDecoration: 'none' }}>Rekomandimet</button>
                 </Link>
+                <Link to="/lines" style={{ textDecoration: 'none' }}>
+                    <button style={{ cursor: 'pointer', border: 'none', backgroundColor: '#243b55', color: 'white', padding: '10px', fontSize: '17px', fontFamily: 'Inter', textDecoration: 'none' }}>Linjat</button>
+                </Link>
+                <Link to="/weather" style={{ textDecoration: 'none' }}>
+                    <button style={{ cursor: 'pointer', border: 'none', backgroundColor: '#243b55', color: 'white', padding: '10px', fontSize: '17px', fontFamily: 'Inter', textDecoration: 'none' }}>Moti</button>
+                </Link>
+                <Link to="/allfeedbacks" style={{ textDecoration: 'none' }}>
+                    <button style={{ cursor: 'pointer', border: 'none', backgroundColor: '#243b55', color: 'white', padding: '10px', fontSize: '17px', fontFamily: 'Inter', textDecoration: 'none' }}>Feedbacks</button>
+                </Link>
                 {userRole && (
                     <>
                         {userRole === 'Admin' && (
-                            <Link to="/admin" style={{ textDecoration: 'none' }}>
+                            <Link to="/dashboard" style={{ textDecoration: 'none' }}>
                                 <button
                                     style={{
                                         cursor: 'pointer',
@@ -38,12 +48,12 @@ const Header = ({ userRole, username, onLogout }) => {
                                         textDecoration: 'none',
                                     }}
                                 >
-                                    Admin Panel
+                                    Admin Dashboard
                                 </button>
                             </Link>
                         )}
                         {username && (
-                            <p style={{
+                           <a href="/welcomeBack" style={{textDecoration:'none'}}> <p style={{
                                 
                                 border: 'none',
                                 backgroundColor: '#243b55',
@@ -51,7 +61,7 @@ const Header = ({ userRole, username, onLogout }) => {
                                 padding: '2px',
                                 fontSize: '17px',
                                 fontFamily: 'Inter',
-                                textDecoration: 'none', }}>{username}</p>
+                                textDecoration: 'none', }}>{username}</p></a>
                         )}
                         <button onClick={handleLogout} style={{ cursor: 'pointer', border: 'none', backgroundColor: '#243b55', color: 'white', padding: '10px', fontSize: '17px', fontFamily: 'Inter', textDecoration: 'none' }}>Logout</button>
                     </>
