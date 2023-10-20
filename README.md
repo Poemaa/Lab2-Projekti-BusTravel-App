@@ -1,6 +1,7 @@
 # Lab2-Projekti-BusTravel-App
 
-This Bus Travel app was a project that I took part of during university. The Bus Travel App is made to simplify getting around and traveling in my country and can be used by local people or also tourists. 
+This Bus Travel app was a project that I took part of during university for "Lab Course 2". The Bus Travel App is made to simplify getting around and traveling in my country and can be used by
+local people or also tourists. 
 It's a platform for mainly dedicated to bus schedules, with detailed access for bus routes and their timetables across Kosovo. The app also provides real-time weather updates for various countries
 and you can log in effortlessly via your Google account. It also includes a recommendation page with all the best cafes, restaurants and attractions to visit in many cities in Kosova for an enriched
 travel experience.
