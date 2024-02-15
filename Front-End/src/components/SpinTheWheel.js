@@ -30,7 +30,7 @@ const SpinTheWheel = () =>
 
     return (
         <div>
-            <h1 style={{fontFamily:'Inter'}}>Spin the Wheel</h1>
+            <h1 style={{fontFamily:'Inter',color:'darkslategray'}}>Spin the Wheel</h1>
             <div className="wheel">
                 {isSpinning ? (
                     <div className="spinner">

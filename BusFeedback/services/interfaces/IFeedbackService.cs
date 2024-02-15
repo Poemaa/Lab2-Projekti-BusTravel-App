@@ -9,7 +9,10 @@ namespace BusFeedback.services.interfaces
          List<Feedback> GetAllFeedbacks();
          Feedback GetAllFeedbacks(string id);
          Feedback CreateFeedback(Feedback feedback);
+
+        Feedback GetFeedbackById(string id);
           void UpdateFeedback(string id, Feedback feedback);
+
           void DeleteFeedback(Feedback feedback);
          void DeleteFeedback(string id);
   

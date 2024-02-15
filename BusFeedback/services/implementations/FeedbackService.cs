@@ -46,6 +46,9 @@ namespace BusFeedback.services.implementations
         public void DeleteFeedback(string id) =>
             _feedbacks.DeleteOne(feedback => feedback.Id == id);
 
+        public Feedback GetFeedbackById(string id) =>
+    _feedbacks.Find<Feedback>(feedback => feedback.Id == id).FirstOrDefault();
+
 
         //public async Task<List<FeedbackDTO>> GetAllFeedbacks()
         //{

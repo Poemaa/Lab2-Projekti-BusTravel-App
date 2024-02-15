@@ -37,7 +37,11 @@ import CardDetails from './components/CardDetails';
 import Lines from './components/Lines';
 import LinesFilter from './components/LinesFilter';
 import Weather from './components/Weather';
-
+import Chefs from './components/Chefs';
+import AddChefs from './components/AddChefs';
+import EditChefs from './components/EditChefs';
+import Recipes from './components/Recipes';
+import AddRecipes from './components/AddRecipes';
 
 
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
@@ -103,7 +107,7 @@ function App() {
                     <Route exact path="/editbusItinerary/:busItineraryId" element={EditBusItinerary} />
                     <Route path="/AddFeedback" element={AddFeedback} />
                     <Route path="/Feedback" element={Feedback} />
-                    <Route exact path="/EditFeedback/:FeedbackId" element={EditFeedback} />
+                    <Route path="/editFeedback/:id" element={<EditFeedback/>} />
                     <Route path="/welcomeback" element={WelcomeBack} />
                     <Route path="/feedbackpage" element={FeedbackPage} />
                     <Route path="/recommendationPrizren" element={RecommendationPrizren} />
@@ -120,8 +124,11 @@ function App() {
                     <Route path="/lines" element={Lines} />
                     <Route path="/linesFilter" element={LinesFilter} />
                     <Route path="/weather" element={Weather} />
-
-                    
+                    <Route path="/chefs" element={Chefs} />
+                    <Route path="/addChefs" element={AddChefs} />
+                    <Route path="/editChef/:chefId" element={<EditChefs/>} />   
+                    <Route path="/recipes" element={Recipes} />
+                    <Route path="/addRecipes" element={AddRecipes} />                 
                 </Routes>
                 <Footer />
             </Router>

@@ -28,8 +28,8 @@ import moment from 'moment';
   }
 
 
-  function deleteFeedback(feedbackId){
-    const url = `https://localhost:7207/api/feedback/${feedbackId}`; 
+  function deleteFeedback(id){
+    const url = `https://localhost:7207/api/feedback/${id}`; 
     fetch(url, {
       method: 'DELETE',
       
@@ -87,14 +87,14 @@ const sortByDate = () => {
       </thead>
       <tbody>
           {dbFeedback.map(dbFeedback => (
-          <tr key={dbFeedback.feedbackId}>
-         <td style={{backgroundColor:'#0a4668',color:'white',height:"50px"}}>{dbFeedback.feedbackId}</td>
+          <tr key={dbFeedback.id}>
+         <td style={{backgroundColor:'#0a4668',color:'white',height:"50px"}}>{dbFeedback.id}</td>
          <td style={{backgroundColor:'#E0FFFF',fontfamily:'Inter',fontSize:'18px'}}>{dbFeedback.text}</td>
          <td style={{backgroundColor:'#E0FFFF',fontfamily:'Inter',fontSize:'18px'}}>{dbFeedback.companyName}</td>
          <td style={{backgroundColor:'#E0FFFF',fontfamily:'Inter',fontSize:'18px'}}>{moment.utc(dbFeedback.date).format('MM/DD/YY')}</td>
            
-           <td style={{backgroundColor:'#E0FFFF'}}><Link style={{textDecoration:'none'}} to={`/editFeedback/${dbFeedback.feedbackId}`} className="btn btn-outline-secondary" onClick={() => {window.location.href=`/editFeedback/${dbFeedback.feedbackId}`}}><button>Edito</button></Link></td>
-           <td style={{backgroundColor:'#E0FFFF'}}><button type="button" onClick={() => {if(window.confirm(`A jeni i sigurt qe doni te fshini Feedback-un? "${dbFeedback.feedbackId}"? `)) deleteFeedback(dbFeedback.feedbackId)}} className="btn btn-secondary">Fshij</button></td>
+           <td style={{backgroundColor:'#E0FFFF'}}><Link style={{textDecoration:'none'}} to={`/editFeedback/${dbFeedback.id}`} className="btn btn-outline-secondary" onClick={() => {window.location.href=`/editFeedback/${dbFeedback.id}`}}><button>Edito</button></Link></td>
+           <td style={{backgroundColor:'#E0FFFF'}}><button type="button" onClick={() => {if(window.confirm(`A jeni i sigurt qe doni te fshini Feedback-un? "${dbFeedback.id}"? `)) deleteFeedback(dbFeedback.id)}} className="btn btn-secondary">Fshij</button></td>
         </tr>   
           ))}
       </tbody>

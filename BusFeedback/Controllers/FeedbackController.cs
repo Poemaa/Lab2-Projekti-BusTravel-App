@@ -1,17 +1,13 @@
-﻿using BusFeedback.Models.DTOs;
+﻿using Microsoft.AspNetCore.Mvc;
+using System;
+using System.Collections.Generic;
 using BusFeedback.Models.Entities;
-using BusFeedback.services.interfaces;  
-using Microsoft.AspNetCore.Authorization;
-using Microsoft.AspNetCore.Http;
-using Microsoft.AspNetCore.Mvc;
-using System.Data;
-using System.Security.Claims;
-using BusFeedback.services.implementations;
+using BusFeedback.services.interfaces;
+
 
 namespace BusFeedback.Controllers
 {
-
-    [Route("api/feedback")]
+    [Route("api/[controller]")]
     [ApiController]
     public class FeedbackController : ControllerBase
     {
@@ -19,58 +15,100 @@ namespace BusFeedback.Controllers
 
         public FeedbackController(IFeedbackService feedbackService)
         {
-            _feedbackService = feedbackService;
+            _feedbackService = feedbackService ?? throw new ArgumentNullException(nameof(feedbackService));
         }
 
         [HttpGet]
-        public IActionResult GetAllFeedbacks()
+        public ActionResult<IEnumerable<Feedback>> Get()
         {
-            var feedbacks = _feedbackService.GetAllFeedbacks();
-            return feedbacks.Count > 0 ? Ok(feedbacks) : NotFound();
-        }
-
-        [HttpGet("/feedbackId")]
-        public IActionResult GetFeedbackByIdAsync(string Id)
-        {
-            var feedback = _feedbackService.GetAllFeedbacks(Id);
-            return feedback != null ? Ok(feedback) : NotFound();
-        }
-
-       // [Authorize]
-        [HttpPost]
-        public async Task<IActionResult> AddFeedback(FeedbackDTO feedbackDto)
-        {
-
-            Feedback feedback = new Feedback()
+            try
             {
-                CompanyName = feedbackDto.CompanyName,
-                Text = feedbackDto.Text,
-                Date = DateTime.Now,
-               
-            };
-
-            var created = _feedbackService.CreateFeedback(feedback);
-            return created != null ? Ok("Feedback created") : BadRequest();
+                var feedbacks = _feedbackService.GetAllFeedbacks();
+                return Ok(feedbacks);
+            }
+            catch (Exception ex)
+            {
+                return StatusCode(500, $"Internal server error: {ex.Message}");
+            }
         }
 
-        //[Authorize]
-        [HttpPut]
-        public async Task<IActionResult> UpdateFeedback([FromForm] FeedbackEditDTO feedbackDto)
+        [HttpGet("{id}")]
+        public ActionResult<Feedback> Get(string id)
         {
-            var feedBack = _feedbackService.GetAllFeedbacks(feedbackDto.Id);
-            feedBack.Text = feedbackDto.Text;
-            _feedbackService.UpdateFeedback(feedbackDto.Id, feedBack);
-            return Ok("Feedback updated");
+            try
+            {
+                var feedback = _feedbackService.GetFeedbackById(id);
+                if (feedback == null)
+                {
+                    return NotFound();
+                }
+                return Ok(feedback);
+            }
+            catch (Exception ex)
+            {
+                return StatusCode(500, $"Internal server error: {ex.Message}");
+            }
         }
 
-       // [Authorize]
-        [HttpDelete("/feedbackId")]
-        public async Task<IActionResult> DeleteFeedbackById(string Id)
+        [HttpPost]
+        public ActionResult<Feedback> Post([FromBody] Feedback feedback)
         {
-            _feedbackService.DeleteFeedback(Id);
-            return Ok("Feedback deleted");
+            try
+            {
+                if (feedback == null)
+                {
+                    return BadRequest("Feedback object is null");
+                }
+
+                var createdFeedback = _feedbackService.CreateFeedback(feedback);
+                return CreatedAtAction(nameof(Get), new { id = createdFeedback.Id }, createdFeedback);
+            }
+            catch (Exception ex)
+            {
+                return StatusCode(500, $"Internal server error: {ex.Message}");
+            }
         }
 
+        [HttpPut("{id}")]
+        public IActionResult Put(string id, [FromBody] Feedback feedback)
+        {
+            try
+            {
+                var existingFeedback = _feedbackService.GetFeedbackById(id);
+
+                if (existingFeedback == null)
+                {
+                    return NotFound();
+                }
+
+                _feedbackService.UpdateFeedback(id, feedback);
+                return NoContent();
+            }
+            catch (Exception ex)
+            {
+                return StatusCode(500, $"Internal server error: {ex.Message}");
+            }
+        }
+
+        [HttpDelete("{id}")]
+        public IActionResult Delete(string id)
+        {
+            try
+            {
+                var feedback = _feedbackService.GetFeedbackById(id);
+
+                if (feedback == null)
+                {
+                    return NotFound();
+                }
+
+                _feedbackService.DeleteFeedback(id);
+                return NoContent();
+            }
+            catch (Exception ex)
+            {
+                return StatusCode(500, $"Internal server error: {ex.Message}");
+            }
+        }
     }
 }
-

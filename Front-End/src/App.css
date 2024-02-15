@@ -1051,7 +1051,7 @@ margin-top: -30px;
 .busfilterContent{
   display: flex;
   flex-direction: row;
-  background: #e8e4e4e8;
+  background: #E9EEF4;
 }
 .formdiv1{
   display: flex;
@@ -1129,23 +1129,25 @@ margin-top: -30px;
 .admin-content ul{
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: top;
   align-items: center;
   width:300px;
-  height:890px;
+  height:1930px;
   background-color: #243b55;
-  margin-top: 0px;
   margin-left: 0px;
+  margin-top: 0px;
+
+  padding-top: 30px;
 }
 
 .admin-content ul li{
+ 
 color:white;
 background-color:#243b55 ;
 font-size: 18px;
 font-family: 'Inter';
-margin-bottom: 70px;
-padding-top:1px;
-padding-right: 40px;
+padding-bottom: 50px;
+
 
 }
 
@@ -1167,6 +1169,7 @@ padding-right: 40px;
   box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
   color:#1c3d6e;
   font-family: "Inter";
+  
 
 }
 
@@ -1177,6 +1180,57 @@ padding-right: 40px;
   align-items: center;
 }
 
+.chart{
+
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  width:1000px;
+  height:900px;
+  margin-top:-100px;
+}
+
+.chart2{
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width:700px;
+  height:500px;
+}
+
+
+
+.piecities{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  background-color: #8fb3d9;
+  border-radius: 20px;
+  width:300px;
+  margin-left: 18px;
+  margin-top: 20px;
+
+
+}
+
+.cities1{
+  margin-right:20px;
+}
+.chart3{
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width:600px;
+  height:600px;
+  margin-right: 135px;
+  margin-left: 10px;
+
+}
 
 .admin-two{
   display: flex;
@@ -1185,6 +1239,9 @@ padding-right: 40px;
   align-items: center;
   width:1240px;
   padding-top: 2px;
+  background-color: rgb(190, 186, 186);
+  height:400px;
+  margin-bottom:0px;
 }
 
 .admin-box{
@@ -1204,6 +1261,10 @@ padding-right: 40px;
   align-items: center;
   margin-top: 100px;
   width:1240px;
+  background-color: rgb(190, 186, 186);
+height:350px;
+margin-top: 0px;
+padding-bottom: 30px;
 }
 
 
